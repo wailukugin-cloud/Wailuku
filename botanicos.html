@@ -809,137 +809,126 @@
 </style>
 
 
-<style id="wailuku-april-global-refine">
-  @media (max-width: 760px){
-    .container{
-      width:min(var(--max, 1320px), calc(100% - 28px)) !important;
-      margin-left:auto !important;
-      margin-right:auto !important;
-    }
-    .nav{
-      background:#050505 !important;
-      border:1px solid rgba(255,255,255,.14) !important;
-      box-shadow:0 30px 90px rgba(0,0,0,.78) !important;
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      opacity:0 !important;
-      visibility:hidden !important;
-      pointer-events:none !important;
-      z-index:90 !important;
-    }
-    body.nav-open .nav{
-      opacity:1 !important;
-      visibility:visible !important;
-      pointer-events:auto !important;
-      transform:translateY(0) !important;
-    }
-    .nav a{
-      background:#101113 !important;
-      color:#f4f1ea !important;
-      font-size:15px !important;
-      font-weight:600 !important;
-      letter-spacing:.04em !important;
-      border:1px solid rgba(255,255,255,.04) !important;
-    }
-    .nav .nav-cta{
-      background:#f4f1ea !important;
-      color:#090909 !important;
-      border-color:#f4f1ea !important;
-    }
-    .nav-overlay{
-      background:rgba(0,0,0,.74) !important;
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      z-index:85 !important;
-    }
-    .hero-overlay,
-    .intro,
-    .story-text,
-    .section-head > div,
-    .content,
-    .product-copy,
-    .contact-card,
-    .form-card,
-    .cta-card,
-    .points-card,
-    .summary-card,
-    .highlight-card,
-    .meaning-card,
-    .timeline-card,
-    .timeline-step,
-    .drink-card,
-    .botanical-copy,
-    .next-card .copy{
-      padding-inline:8px !important;
-      width:100% !important;
-      max-width:100% !important;
-      margin-left:auto !important;
-      margin-right:auto !important;
-      box-sizing:border-box !important;
-    }
-    .hero-overlay p,
-    .intro p,
-    .story-text p,
-    .section-copy,
-    .content p,
-    .product-copy p,
-    .contact-card p,
-    .form-card p,
-    .cta-card p,
-    .points-card p,
-    .summary-card p,
-    .highlight-card p,
-    .meaning-card p,
-    .timeline-card p,
-    .timeline-step p,
-    .drink-card p,
-    .drink-card .service,
-    .botanical-card p,
-    .next-card .copy p{
-      max-width:none !important;
-      margin-left:0 !important;
-      margin-right:0 !important;
-      padding-inline:0 !important;
-      word-break:normal !important;
-      overflow-wrap:break-word !important;
-    }
+<style id="wailuku-v5-global-fixes">
+@media (max-width: 760px){
+  :root{ --pad: 16px !important; }
+  .container{ width:min(var(--max, 1320px), calc(100% - 32px)) !important; margin:0 auto !important; }
+  .header{ background:rgba(5,5,5,.86) !important; }
+  .header-inner{ min-height:72px !important; }
+  .hero, .section, .next-section, .closing, .summary, .highlight, .info{ padding-top:28px !important; }
+  .hero{ padding-top:104px !important; }
+  .hero-banner{ padding:28px !important; border-radius:28px !important; background-position:center center !important; }
+  .hero-overlay,
+  .intro,
+  .story-text,
+  .section-head > div,
+  .content,
+  .product-copy,
+  .summary-card,
+  .highlight-card,
+  .contact-card,
+  .form-card,
+  .cta-card,
+  .points-card,
+  .next-card .copy{
+    text-align:left !important;
   }
+  .intro, .story-text, .section-head, .content, .product-copy, .summary-card p, .highlight-card p,
+  .hero-overlay p, .hero-sub, .story-text p, .intro p, .content p, .product-copy p, .contact-card p,
+  .form-card p, .cta-card p, .points-card p, .next-card .copy p, .drink-card .service, .botanical-card p{
+    max-width:none !important;
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .intro p, .story-text p, .hero-overlay p, .hero-sub, .content p, .product-copy p,
+  .summary-card p, .highlight-card p, .contact-card p, .form-card p, .cta-card p,
+  .points-card p, .next-card .copy p, .botanical-card p, .drink-card .service{
+    font-size:15px !important;
+    line-height:1.82 !important;
+  }
+  .nav{
+    background:#050505 !important;
+    border-color:rgba(255,255,255,.14) !important;
+    box-shadow:0 30px 90px rgba(0,0,0,.78) !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .nav a{
+    display:block !important;
+    width:100% !important;
+    position:relative !important;
+    z-index:120 !important;
+    pointer-events:auto !important;
+    background:#101113 !important;
+    color:#f4f1ea !important;
+    font-size:16px !important;
+    font-weight:600 !important;
+    letter-spacing:.02em !important;
+  }
+  .nav .nav-cta{
+    background:#f4f1ea !important;
+    color:#090909 !important;
+    border-color:#f4f1ea !important;
+  }
+  .nav-overlay{
+    background:rgba(0,0,0,.78) !important;
+  }
+  body.nav-open .nav{ pointer-events:auto !important; }
+  .btn, .hero-actions .btn, .actions .btn, .contact-actions .btn, .gate-actions .btn{
+    width:100% !important;
+  }
+}
 </style>
 
-<style id="wailuku-botanicos-april-refine">
-  @media (max-width: 760px){
-    .botanical-card,
-    .botanical-card.wide{
-      grid-template-columns:1fr 88px !important;
-      gap:12px !important;
-      min-height:unset !important;
-      align-items:center !important;
-    }
-    .botanical-media{
-      order:2 !important;
-      align-self:center !important;
-    }
-    .botanical-copy{
-      order:1 !important;
-    }
-    .botanical-media img,
-    .botanical-card.wide .botanical-media img{
-      max-width:82px !important;
-      max-height:82px !important;
-    }
-    .botanical-card .lead{
-      font-size:18px !important;
-      line-height:1.2 !important;
-    }
-    .botanical-card h3{
-      font-size:26px !important;
-    }
-    .botanical-card p{
-      font-size:13px !important;
-      line-height:1.7 !important;
+<style id="wailuku-v5-botanicos-fixes">
+@media (max-width: 760px){
+  .botanicals-grid{ gap:16px !important; }
+  .botanical-card,
+  .botanical-card.wide{
+    grid-template-columns: minmax(0,1fr) 88px !important;
+    min-height: auto !important;
+    padding: 22px !important;
+    gap: 16px !important;
+  }
+  .botanical-card .lead{ font-size: 17px !important; margin-top: 8px !important; }
+  .botanical-card h3{ font-size: 28px !important; }
+  .botanical-media img,
+  .botanical-card.wide .botanical-media img{
+    max-width: 82px !important;
+    max-height: 82px !important;
+  }
+}
+</style>
+
+<script id="wailuku-v5-pomelo-fix">
+(function(){
+  var pomelo = document.querySelector('img[alt*="pomelo"], img[src*="pomelo"]');
+  if(!pomelo) return;
+  var fallback = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'><g fill='none' stroke='%23d9d6cf' stroke-width='3.2' opacity='0.92'><circle cx='110' cy='110' r='72'/><circle cx='110' cy='110' r='56' opacity='0.65'/><circle cx='110' cy='110' r='12' opacity='0.72'/><path d='M110 38v144M38 110h144M58 58l104 104M162 58L58 162' opacity='0.72'/><path d='M110 54c18 0 31 24 31 56s-13 56-31 56-31-24-31-56 13-56 31-56z' opacity='0.35'/><path d='M54 110c0-18 24-31 56-31s56 13 56 31-24 31-56 31-56-13-56-31z' opacity='0.35'/></g></svg>";
+  var sources = [
+    pomelo.getAttribute('src'),
+    'assets/pomelo-verde.png',
+    'assets/pomeloverde.png',
+    'assets/pomelo_verde.png',
+    'assets/pomelo.jpg',
+    'assets/pomelo-verde.jpg',
+    fallback
+  ].filter(Boolean);
+  var tried = 0;
+  function next(){
+    tried += 1;
+    if(tried < sources.length) pomelo.src = sources[tried];
+    else {
+      pomelo.src = fallback;
+      pomelo.alt = 'Ilustración de pomelo verde';
+      pomelo.style.maxWidth = '130px';
     }
   }
-</style>
+  pomelo.onerror = next;
+  if(pomelo.complete && (!pomelo.naturalWidth || pomelo.naturalWidth < 2)) next();
+})();
+</script>
 
 </head>
 <body>
@@ -949,7 +938,7 @@
 <img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/>
 <span>Wailuku Gin</span>
 </a>
-<nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button>
+<nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="productos.html">Productos</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button>
 </div>
 </header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
@@ -1135,6 +1124,39 @@
         pomelo.src = sources[tried];
       }
     };
+  }
+})();
+</script>
+
+
+<script id="wailuku-v5-nav-js">
+(function(){
+  function setupNav(){
+    var nav = document.getElementById('siteNav');
+    var navToggle = document.getElementById('navToggle');
+    if(!nav) return;
+    nav.querySelectorAll('a[href]').forEach(function(link){
+      if(link.dataset.navBound === '1') return;
+      link.dataset.navBound = '1';
+      var handler = function(e){
+        var href = link.getAttribute('href');
+        if(!href || href.charAt(0) === '#') return;
+        if(window.innerWidth <= 760){
+          e.preventDefault();
+          e.stopPropagation();
+          document.body.classList.remove('nav-open');
+          if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+          window.setTimeout(function(){ window.location.href = href; }, 20);
+        }
+      };
+      link.addEventListener('click', handler, {passive:false});
+      link.addEventListener('touchend', handler, {passive:false});
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', setupNav);
+  } else {
+    setupNav();
   }
 })();
 </script>

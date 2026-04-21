@@ -342,120 +342,83 @@
 </style>
 
 
-<style id="wailuku-april-global-refine">
-  @media (max-width: 760px){
-    .container{
-      width:min(var(--max, 1320px), calc(100% - 28px)) !important;
-      margin-left:auto !important;
-      margin-right:auto !important;
-    }
-    .nav{
-      background:#050505 !important;
-      border:1px solid rgba(255,255,255,.14) !important;
-      box-shadow:0 30px 90px rgba(0,0,0,.78) !important;
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      opacity:0 !important;
-      visibility:hidden !important;
-      pointer-events:none !important;
-      z-index:90 !important;
-    }
-    body.nav-open .nav{
-      opacity:1 !important;
-      visibility:visible !important;
-      pointer-events:auto !important;
-      transform:translateY(0) !important;
-    }
-    .nav a{
-      background:#101113 !important;
-      color:#f4f1ea !important;
-      font-size:15px !important;
-      font-weight:600 !important;
-      letter-spacing:.04em !important;
-      border:1px solid rgba(255,255,255,.04) !important;
-    }
-    .nav .nav-cta{
-      background:#f4f1ea !important;
-      color:#090909 !important;
-      border-color:#f4f1ea !important;
-    }
-    .nav-overlay{
-      background:rgba(0,0,0,.74) !important;
-      backdrop-filter:none !important;
-      -webkit-backdrop-filter:none !important;
-      z-index:85 !important;
-    }
-    .hero-overlay,
-    .intro,
-    .story-text,
-    .section-head > div,
-    .content,
-    .product-copy,
-    .contact-card,
-    .form-card,
-    .cta-card,
-    .points-card,
-    .summary-card,
-    .highlight-card,
-    .meaning-card,
-    .timeline-card,
-    .timeline-step,
-    .drink-card,
-    .botanical-copy,
-    .next-card .copy{
-      padding-inline:8px !important;
-      width:100% !important;
-      max-width:100% !important;
-      margin-left:auto !important;
-      margin-right:auto !important;
-      box-sizing:border-box !important;
-    }
-    .hero-overlay p,
-    .intro p,
-    .story-text p,
-    .section-copy,
-    .content p,
-    .product-copy p,
-    .contact-card p,
-    .form-card p,
-    .cta-card p,
-    .points-card p,
-    .summary-card p,
-    .highlight-card p,
-    .meaning-card p,
-    .timeline-card p,
-    .timeline-step p,
-    .drink-card p,
-    .drink-card .service,
-    .botanical-card p,
-    .next-card .copy p{
-      max-width:none !important;
-      margin-left:0 !important;
-      margin-right:0 !important;
-      padding-inline:0 !important;
-      word-break:normal !important;
-      overflow-wrap:break-word !important;
-    }
+<style id="wailuku-v5-global-fixes">
+@media (max-width: 760px){
+  :root{ --pad: 16px !important; }
+  .container{ width:min(var(--max, 1320px), calc(100% - 32px)) !important; margin:0 auto !important; }
+  .header{ background:rgba(5,5,5,.86) !important; }
+  .header-inner{ min-height:72px !important; }
+  .hero, .section, .next-section, .closing, .summary, .highlight, .info{ padding-top:28px !important; }
+  .hero{ padding-top:104px !important; }
+  .hero-banner{ padding:28px !important; border-radius:28px !important; background-position:center center !important; }
+  .hero-overlay,
+  .intro,
+  .story-text,
+  .section-head > div,
+  .content,
+  .product-copy,
+  .summary-card,
+  .highlight-card,
+  .contact-card,
+  .form-card,
+  .cta-card,
+  .points-card,
+  .next-card .copy{
+    text-align:left !important;
   }
+  .intro, .story-text, .section-head, .content, .product-copy, .summary-card p, .highlight-card p,
+  .hero-overlay p, .hero-sub, .story-text p, .intro p, .content p, .product-copy p, .contact-card p,
+  .form-card p, .cta-card p, .points-card p, .next-card .copy p, .drink-card .service, .botanical-card p{
+    max-width:none !important;
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .intro p, .story-text p, .hero-overlay p, .hero-sub, .content p, .product-copy p,
+  .summary-card p, .highlight-card p, .contact-card p, .form-card p, .cta-card p,
+  .points-card p, .next-card .copy p, .botanical-card p, .drink-card .service{
+    font-size:15px !important;
+    line-height:1.82 !important;
+  }
+  .nav{
+    background:#050505 !important;
+    border-color:rgba(255,255,255,.14) !important;
+    box-shadow:0 30px 90px rgba(0,0,0,.78) !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .nav a{
+    display:block !important;
+    width:100% !important;
+    position:relative !important;
+    z-index:120 !important;
+    pointer-events:auto !important;
+    background:#101113 !important;
+    color:#f4f1ea !important;
+    font-size:16px !important;
+    font-weight:600 !important;
+    letter-spacing:.02em !important;
+  }
+  .nav .nav-cta{
+    background:#f4f1ea !important;
+    color:#090909 !important;
+    border-color:#f4f1ea !important;
+  }
+  .nav-overlay{
+    background:rgba(0,0,0,.78) !important;
+  }
+  body.nav-open .nav{ pointer-events:auto !important; }
+  .btn, .hero-actions .btn, .actions .btn, .contact-actions .btn, .gate-actions .btn{
+    width:100% !important;
+  }
+}
 </style>
 
-<style id="wailuku-tragos-april-refine">
-  @media (max-width: 760px){
-    .intro p{
-      font-size:14px !important;
-      line-height:1.9 !important;
-      max-width:100% !important;
-    }
-    .drink-card{
-      padding:22px !important;
-    }
-    .drink-card h2{
-      font-size:26px !important;
-    }
-    .drink-card .lead{
-      font-size:18px !important;
-    }
-  }
+<style id="wailuku-v5-tragos-fixes">
+@media (max-width: 760px){
+  .drinks-grid{ grid-template-columns:1fr !important; gap:16px !important; }
+  .drink-card{ padding: 22px !important; }
+}
 </style>
 
 </head>
@@ -541,6 +504,39 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if
         pomelo.src = sources[tried];
       }
     };
+  }
+})();
+</script>
+
+
+<script id="wailuku-v5-nav-js">
+(function(){
+  function setupNav(){
+    var nav = document.getElementById('siteNav');
+    var navToggle = document.getElementById('navToggle');
+    if(!nav) return;
+    nav.querySelectorAll('a[href]').forEach(function(link){
+      if(link.dataset.navBound === '1') return;
+      link.dataset.navBound = '1';
+      var handler = function(e){
+        var href = link.getAttribute('href');
+        if(!href || href.charAt(0) === '#') return;
+        if(window.innerWidth <= 760){
+          e.preventDefault();
+          e.stopPropagation();
+          document.body.classList.remove('nav-open');
+          if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+          window.setTimeout(function(){ window.location.href = href; }, 20);
+        }
+      };
+      link.addEventListener('click', handler, {passive:false});
+      link.addEventListener('touchend', handler, {passive:false});
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', setupNav);
+  } else {
+    setupNav();
   }
 })();
 </script>
