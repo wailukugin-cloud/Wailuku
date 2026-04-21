@@ -719,11 +719,100 @@
       }
     }
 </style>
+
+<style id="wailuku-final-fixes">
+  @media (max-width: 760px){
+    .nav{
+      background:#050505 !important;
+      border-color:rgba(255,255,255,.14) !important;
+      box-shadow:0 30px 90px rgba(0,0,0,.72) !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+    }
+    .nav a{
+      background:#101113 !important;
+      color:#f4f1ea !important;
+      font-size:15px !important;
+      font-weight:600 !important;
+      letter-spacing:.04em !important;
+    }
+    .nav .nav-cta{
+      background:#f4f1ea !important;
+      color:#090909 !important;
+      border-color:#f4f1ea !important;
+    }
+    .nav-overlay{
+      background:rgba(0,0,0,.72) !important;
+    }
+    .hero-overlay,
+    .intro,
+    .story-text,
+    .section-head > div,
+    .content,
+    .product-copy,
+    .contact-card,
+    .form-card,
+    .cta-card,
+    .points-card{
+      text-align:left !important;
+    }
+  }
+</style>
+
+
+<style id="wailuku-botanicos-mobile-fix">
+  @media (max-width: 980px){
+    .botanicals-grid{grid-template-columns:1fr !important;}
+  }
+  @media (max-width: 760px){
+    .hero-banner{background-position:62% center !important;}
+    .intro{padding-left:2px !important; padding-right:2px !important;}
+    .botanical-card,
+    .botanical-card.wide{
+      grid-template-columns:minmax(0,1fr) 96px !important;
+      gap:16px !important;
+      align-items:start !important;
+      min-height:auto !important;
+      padding:22px !important;
+    }
+    .botanical-copy{order:1 !important;}
+    .botanical-media{
+      order:2 !important;
+      align-self:center !important;
+      justify-content:flex-end !important;
+    }
+    .botanical-media img,
+    .botanical-card.wide .botanical-media img{
+      max-width:92px !important;
+      max-height:92px !important;
+    }
+    .botanical-card h3{
+      font-size:clamp(24px, 8vw, 38px) !important;
+    }
+    .botanical-card .lead{
+      font-size:18px !important;
+      line-height:1.28 !important;
+      margin-top:10px !important;
+    }
+    .botanical-card p{
+      max-width:none !important;
+      font-size:15px !important;
+      line-height:1.72 !important;
+    }
+    .botanical-card .origin{
+      margin-bottom:8px !important;
+    }
+    .next-card{
+      grid-template-columns:1fr !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 <header class="header">
 <div class="container header-inner">
-<a aria-label="Wailuku Gin" class="brand" href="index_home.html">
+<a aria-label="Wailuku Gin" class="brand" href="index.html">
 <img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/>
 <span>Wailuku Gin</span>
 </a>
@@ -844,7 +933,7 @@
 <footer class="footer">
 <div class="container footer-inner">
 <div class="footer-copy">Wailuku Gin — Argentina</div>
-<div class="footer-links"><a href="index_home.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></div>
+<div class="footer-links"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></div>
 </div>
 </footer>
 <script>
@@ -893,5 +982,29 @@
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
+
+<script id="wailuku-final-js">
+(function(){
+  var pomelo = document.querySelector('img[alt*="pomelo"], img[src*="pomelo"]');
+  if(pomelo){
+    var sources = [
+      pomelo.getAttribute('src'),
+      'assets/pomelo-verde.png',
+      'assets/pomeloverde.png',
+      'assets/pomelo_verde.png',
+      'assets/pomelo.jpg',
+      'assets/pomelo-verde.jpg'
+    ].filter(Boolean);
+    var tried = 0;
+    pomelo.onerror = function(){
+      tried += 1;
+      if(tried < sources.length){
+        pomelo.src = sources[tried];
+      }
+    };
+  }
+})();
+</script>
+
 </body>
 </html>

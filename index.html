@@ -810,6 +810,118 @@
       }
     }
 </style>
+
+<style id="wailuku-final-fixes">
+  @media (max-width: 760px){
+    .nav{
+      background:#050505 !important;
+      border-color:rgba(255,255,255,.14) !important;
+      box-shadow:0 30px 90px rgba(0,0,0,.72) !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+    }
+    .nav a{
+      background:#101113 !important;
+      color:#f4f1ea !important;
+      font-size:15px !important;
+      font-weight:600 !important;
+      letter-spacing:.04em !important;
+    }
+    .nav .nav-cta{
+      background:#f4f1ea !important;
+      color:#090909 !important;
+      border-color:#f4f1ea !important;
+    }
+    .nav-overlay{
+      background:rgba(0,0,0,.72) !important;
+    }
+    .hero-overlay,
+    .intro,
+    .story-text,
+    .section-head > div,
+    .content,
+    .product-copy,
+    .contact-card,
+    .form-card,
+    .cta-card,
+    .points-card{
+      text-align:left !important;
+    }
+  }
+</style>
+
+
+<style id="wailuku-index-mobile-fix">
+  @media (max-width: 980px){
+    .hero-grid{grid-template-columns:1fr !important; gap:24px !important;}
+    .preview-grid{grid-template-columns:repeat(2, minmax(0,1fr)) !important;}
+    .about-grid{grid-template-columns:repeat(2, minmax(0,1fr)) !important; gap:16px !important;}
+    .about-column{gap:16px !important;}
+  }
+  @media (max-width: 760px){
+    .container{width:min(1600px, calc(100% - 24px)) !important;}
+    .hero{
+      min-height:auto !important;
+      padding:108px 0 38px !important;
+      background-position:70% center !important;
+    }
+    .hero-grid{
+      grid-template-columns:1fr !important;
+      gap:24px !important;
+      align-items:end !important;
+    }
+    .hero-title{
+      max-width:6ch !important;
+      font-size:clamp(46px, 16vw, 70px) !important;
+    }
+    .hero-sub{
+      max-width:21ch !important;
+      font-size:15px !important;
+    }
+    .hero-visual{
+      display:none !important;
+    }
+    .hero-actions{
+      margin-top:24px !important;
+    }
+    .preview-shell{
+      padding:16px !important;
+    }
+    .preview-grid{
+      grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+      gap:14px !important;
+    }
+    .product-preview-card{
+      min-height:220px !important;
+      padding:14px !important;
+      border-radius:22px !important;
+    }
+    .about-grid{
+      grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+      gap:14px !important;
+    }
+    .about-column{
+      gap:14px !important;
+    }
+    .feature-link{
+      min-height:180px !important;
+      padding:18px !important;
+    }
+    .feature-content h3{
+      font-size:26px !important;
+    }
+    .feature-content p{
+      max-width:none !important;
+      font-size:12px !important;
+      line-height:1.6 !important;
+    }
+    .secondary-grid{
+      grid-template-columns:1fr !important;
+      gap:14px !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
@@ -824,7 +936,7 @@
 </div>
 <header class="header">
 <div class="container header-inner">
-<a aria-label="Wailuku Gin" class="brand" href="index_home.html">
+<a aria-label="Wailuku Gin" class="brand" href="index.html">
 <img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/>
 <span>Wailuku Gin</span>
 </a>
@@ -957,7 +1069,7 @@
 <p class="footer-copy">Gin artesanal inspirado en la fuerza del mar. Una marca construida desde el detalle, la identidad visual y el trabajo en pequeños lotes.</p>
 <div class="legal">Contenido exclusivo para mayores de 18 años. Beber con moderación.</div>
 </div>
-<div class="footer-links"><a href="index_home.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></div>
+<div class="footer-links"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></div>
 </div>
 </footer>
 <script>
@@ -1040,5 +1152,29 @@
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
+
+<script id="wailuku-final-js">
+(function(){
+  var pomelo = document.querySelector('img[alt*="pomelo"], img[src*="pomelo"]');
+  if(pomelo){
+    var sources = [
+      pomelo.getAttribute('src'),
+      'assets/pomelo-verde.png',
+      'assets/pomeloverde.png',
+      'assets/pomelo_verde.png',
+      'assets/pomelo.jpg',
+      'assets/pomelo-verde.jpg'
+    ].filter(Boolean);
+    var tried = 0;
+    pomelo.onerror = function(){
+      tried += 1;
+      if(tried < sources.length){
+        pomelo.src = sources[tried];
+      }
+    };
+  }
+})();
+</script>
+
 </body>
 </html>
