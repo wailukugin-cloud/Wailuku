@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Contacto — Wailuku Gin</title>
+<meta content="Consultas, compras, eventos y puntos de venta de Wailuku Gin." name="description"/>
+<style>
+    :root{
+      --hero-image:url("assets/contacto-hero.jpg");
+      --bg:#060606;
+      --text:#f3f0e9;
+      --muted:rgba(243,240,233,.76);
+      --muted-2:rgba(243,240,233,.56);
+      --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
+      --shadow:0 24px 80px rgba(0,0,0,.45);
+      --max:1320px;
+      --pad:24px;
+      --serif:ui-serif,Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,sans-serif
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(255,255,255,.05), transparent 55%),
+        radial-gradient(900px 600px at 82% 10%, rgba(255,255,255,.03), transparent 48%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.07;
+      mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")
+    }
+
+    a{text-decoration:none;color:inherit}
+    input,textarea,button{font:inherit}
+
+    .container{
+      width:min(var(--max),calc(100% - (var(--pad) * 2)));
+      margin:0 auto
+    }
+
+    .header{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      background:rgba(6,6,6,.66);
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+
+    .header-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase
+    }
+
+        .brand-mark{
+      width:16px;
+      height:20px;
+      object-fit:contain;
+      display:block;
+      flex:0 0 auto;
+      opacity:.96;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+      flex-wrap:wrap
+    }
+
+    .nav a:hover{color:var(--text)}
+
+    .nav-cta{
+      padding:11px 16px;
+      border:1px solid var(--line-strong);
+      border-radius:999px;
+      color:var(--text)!important
+    }
+
+    .hero{padding:120px 0 36px}
+
+    .hero-banner{
+      position:relative;
+      min-height:500px;
+      border-radius:36px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.07);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.58)),
+        var(--hero-image) center/cover no-repeat;
+      display:flex;
+      align-items:flex-end;
+      padding:64px
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+      margin-bottom:18px
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:rgba(255,255,255,.34)
+    }
+
+    .hero-overlay h1{
+      margin:0;
+      font-family:var(--serif);
+      font-size:clamp(54px,8vw,110px);
+      line-height:.94;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.02em
+    }
+
+    .hero-overlay p{
+      margin:20px 0 0;
+      font-size:20px;
+      line-height:1.8;
+      color:var(--muted);
+      max-width:40ch
+    }
+
+    .section{padding:34px 0 0}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:24px
+    }
+
+    .contact-card,
+    .form-card,
+    .cta-card,
+    .points-card{
+      padding:32px;
+      border-radius:32px;
+      border:1px solid rgba(255,255,255,.07);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow:var(--shadow)
+    }
+
+    .contact-card h2,
+    .form-card h2,
+    .cta-card h2,
+    .points-card h2{
+      margin:0;
+      font-family:var(--serif);
+      font-size:clamp(34px,4vw,54px);
+      line-height:1;
+      font-weight:600;
+      text-transform:uppercase
+    }
+
+    .contact-card p,
+    .form-card p,
+    .cta-card p,
+    .points-card p{
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.9
+    }
+
+    .contact-list{
+      display:grid;
+      gap:16px;
+      margin-top:24px
+    }
+
+    .contact-item{
+      padding:18px 20px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.02)
+    }
+
+    .contact-item span{
+      display:block;
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted-2);
+      margin-bottom:8px
+    }
+
+    .contact-item strong{
+      font-size:18px;
+      font-weight:600
+    }
+
+    .contact-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--line-strong);
+      color:var(--text);
+      background:transparent;
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease;
+      cursor:pointer
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.24)
+    }
+
+    .btn-primary{
+      background:rgba(255,255,255,.92);
+      color:#090909;
+      border-color:rgba(255,255,255,.92)
+    }
+
+    .btn-primary:hover{background:#fff}
+
+    .points-stack{
+      display:grid;
+      gap:24px
+    }
+
+    .points-card{
+      position:relative;
+      overflow:hidden
+    }
+
+    .points-card::after{
+      content:"";
+      position:absolute;
+      inset:auto -60px -60px auto;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,.08), transparent 70%);
+      pointer-events:none
+    }
+
+    .points-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted-2)
+    }
+
+    .points-eyebrow::before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:rgba(255,255,255,.24)
+    }
+
+    .points-note{
+      margin-top:18px;
+      color:var(--muted-2);
+      font-size:13px;
+      line-height:1.8
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:24px
+    }
+
+    .field{display:grid;gap:8px}
+    .field.full{grid-column:1 / -1}
+
+    .field label{
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted-2)
+    }
+
+    .field input,
+    .field textarea{
+      width:100%;
+      padding:16px 18px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.02);
+      color:var(--text);
+      outline:none
+    }
+
+    .field textarea{
+      min-height:180px;
+      resize:vertical
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder{
+      color:rgba(243,240,233,.35)
+    }
+
+    .form-note{
+      margin-top:18px;
+      color:var(--muted-2);
+      font-size:13px;
+      line-height:1.8
+    }
+
+    .cta-wrap{padding:34px 0 78px}
+
+    .cta-card{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:24px;
+      align-items:center
+    }
+
+    .footer{
+      padding:0 0 48px;
+      border-top:1px solid rgba(255,255,255,.06)
+    }
+
+    .footer-inner{
+      padding-top:28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap
+    }
+
+    .footer-copy{
+      color:var(--muted-2);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase
+    }
+
+    .footer-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      color:var(--muted);
+      font-size:14px;
+      flex-wrap:wrap
+    }
+
+    .footer-links a:hover{color:var(--text)}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(16px);
+      transition:opacity .8s ease, transform .8s ease
+    }
+
+    .reveal.is-visible{
+      opacity:1;
+      transform:translateY(0)
+    }
+
+    @media (max-width:980px){
+      .contact-grid,.cta-card{grid-template-columns:1fr}
+      .hero-banner{min-height:430px;padding:40px}
+      .form-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:760px){
+      .header-inner{min-height:72px}
+      .nav{gap:12px;font-size:13px}
+      .nav a:not(.nav-cta){display:none}
+      .hero{padding:110px 0 24px}
+      .hero-banner{min-height:360px;padding:26px;border-radius:26px}
+      .hero-overlay p{font-size:17px}
+      .contact-card,.form-card,.cta-card,.points-card{padding:24px;border-radius:26px}
+      .contact-actions,.cta-card .contact-actions{flex-direction:column}
+      .contact-actions .btn{width:100%}
+    }
+  
+
+    /* Responsive mobile navigation + layout refinements */
+    .nav-toggle{
+      display:none;
+      align-items:center;
+      justify-content:center;
+      width:46px;
+      height:46px;
+      padding:0;
+      border-radius:999px;
+      border:1px solid var(--line-strong);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+      flex:0 0 auto;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .nav-toggle:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.24);
+    }
+    .nav-toggle-line{
+      position:relative;
+      display:block;
+      width:18px;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .25s ease, opacity .2s ease;
+    }
+    .nav-toggle-line::before,
+    .nav-toggle-line::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:18px;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .25s ease, top .25s ease, bottom .25s ease;
+    }
+    .nav-toggle-line::before{top:-6px}
+    .nav-toggle-line::after{bottom:-6px}
+    body.nav-open .nav-toggle-line{background:transparent}
+    body.nav-open .nav-toggle-line::before{top:0; transform:rotate(45deg)}
+    body.nav-open .nav-toggle-line::after{bottom:0; transform:rotate(-45deg)}
+
+    .nav-overlay{
+      display:none;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .25s ease;
+    }
+
+    @media (max-width: 980px){
+      :root{ --pad:20px; }
+      .hero-grid,
+      .about-grid,
+      .secondary-grid,
+      .contact-grid,
+      .products-grid,
+      .drinks-grid,
+      .timeline-grid,
+      .preview-grid,
+      .process-card,
+      .process-card.reverse,
+      .bottling-card,
+      .next-card,
+      .botanicals-grid{
+        grid-template-columns:1fr !important;
+      }
+      .botanical-card,
+      .botanical-card.wide,
+      .product-card{
+        grid-template-columns:1fr !important;
+      }
+      .hero-visual{min-height:480px}
+      .hero-bottle{max-height:500px}
+      .next-card .copy p,
+      .hero-sub,
+      .hero-overlay p{
+        max-width:none;
+      }
+    }
+
+    @media (max-width: 760px){
+      :root{ --pad:16px; }
+      .header-inner{
+        min-height:72px !important;
+        gap:12px;
+      }
+      .brand{
+        min-width:0;
+      }
+      .brand span{
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .nav-toggle{
+        display:inline-flex;
+      }
+      .nav{
+        position:fixed;
+        top:72px;
+        left:16px;
+        right:16px;
+        z-index:60;
+        display:flex !important;
+        flex-direction:column;
+        align-items:stretch;
+        gap:8px !important;
+        padding:16px;
+        border-radius:24px;
+        border:1px solid rgba(255,255,255,.1);
+        background:rgba(10,10,10,.96);
+        box-shadow:0 28px 80px rgba(0,0,0,.5);
+        max-height:calc(100vh - 96px);
+        overflow:auto;
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(-8px);
+        transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+      }
+      .nav a{
+        display:block !important;
+        width:100%;
+        padding:12px 14px;
+        border-radius:16px;
+        background:rgba(255,255,255,.03);
+        color:var(--text);
+      }
+      .nav .nav-cta{
+        padding:12px 14px;
+        text-align:center;
+      }
+      body.nav-open .nav{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:translateY(0);
+      }
+      .nav-overlay{
+        display:block;
+        position:fixed;
+        inset:72px 0 0 0;
+        z-index:55;
+        background:rgba(0,0,0,.48);
+        backdrop-filter:blur(2px);
+        -webkit-backdrop-filter:blur(2px);
+      }
+      body.nav-open .nav-overlay{
+        opacity:1;
+        pointer-events:auto;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:104px 0 32px !important;
+      }
+      .hero-banner{
+        min-height:380px !important;
+        padding:26px !important;
+        border-radius:26px !important;
+      }
+      .hero-grid{
+        gap:28px !important;
+      }
+      .hero-title{
+        max-width:none;
+        font-size:clamp(42px, 16vw, 72px) !important;
+      }
+      .hero-sub,
+      .hero-overlay p,
+      .intro p,
+      .story-text p,
+      .section-copy,
+      .contact-card p,
+      .form-card p,
+      .cta-card p,
+      .points-card p,
+      .summary-card p,
+      .highlight-card p,
+      .content p,
+      .product-copy p,
+      .botanical-card p,
+      .drink-card .service,
+      .next-card .copy p{
+        font-size:15px !important;
+        line-height:1.8 !important;
+      }
+      .hero-visual{
+        min-height:360px !important;
+      }
+      .hero-glow{
+        width:320px !important;
+        height:320px !important;
+      }
+      .hero-bottle{
+        max-height:340px !important;
+      }
+      .section{
+        padding:28px 0 0 !important;
+      }
+      .feature-link,
+      .summary-card,
+      .highlight-card,
+      .meaning-card,
+      .timeline-card,
+      .timeline-step,
+      .botanical-card,
+      .product-card,
+      .drink-card,
+      .process-card,
+      .contact-card,
+      .form-card,
+      .cta-card,
+      .points-card,
+      .next-card,
+      .preview-shell{
+        padding:24px !important;
+        border-radius:26px !important;
+      }
+      .media,
+      .product-image,
+      .next-card .visual{
+        min-height:220px !important;
+      }
+      .bottling-media{
+        min-height:280px !important;
+      }
+      .botanical-card.wide{
+        grid-column:span 1 !important;
+      }
+      .botanical-media img,
+      .botanical-card.wide .botanical-media img{
+        max-width:132px !important;
+        max-height:132px !important;
+      }
+      .form-grid{
+        grid-template-columns:1fr !important;
+      }
+      .contact-actions,
+      .hero-actions,
+      .actions,
+      .gate-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn,
+      .hero-actions .btn,
+      .actions .btn,
+      .contact-actions .btn,
+      .gate-actions .btn{
+        width:100%;
+      }
+      .footer-inner,
+      .footer-grid{
+        grid-template-columns:1fr !important;
+        justify-content:flex-start !important;
+        align-items:flex-start !important;
+      }
+      .footer-links{
+        gap:12px !important;
+      }
+    }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a aria-label="Wailuku Gin" class="brand" href="index_home.html"><img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/><span>Wailuku Gin</span></a>
+<nav aria-label="Navegación principal" class="nav" id="siteNav">
+<a href="index_home.html">Inicio</a>
+<a href="historia.html">Historia</a>
+<a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a>
+<a href="tragos.html">Tragos</a>
+<a href="contacto.html">Contacto</a>
+<a href="productos.html">Productos</a>
+<a href="https://wailuku.my.canva.site/puntos-de-venta">Puntos de venta</a>
+</nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button>
+</div>
+</header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
+<main>
+<section class="hero">
+<div class="container">
+<div class="hero-banner reveal">
+<div class="hero-overlay">
+<div class="eyebrow">Consultas y puntos de venta</div>
+<h1>Contacto</h1>
+<p>Compras, eventos, colaboraciones y consultas comerciales. Un punto claro para entrar en contacto con Wailuku.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container contact-grid">
+<div class="contact-card reveal">
+<h2>Hablemos</h2>
+<p>Cada consulta es una nueva forma de acercarse al universo Wailuku. Escribinos por redes o dejá tu mensaje para contactarte de forma directa.</p>
+<div class="contact-list">
+<div class="contact-item">
+<span>Instagram</span>
+<strong>@wailukugin</strong>
+</div>
+<div class="contact-item">
+<span>Ubicación</span>
+<strong>San Cayetano, Buenos Aires, Argentina</strong>
+</div>
+<div class="contact-item">
+<span>Consultas</span>
+<strong>Compras, eventos, puntos de venta y colaboraciones</strong>
+</div>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" href="https://instagram.com/wailukugin" rel="noopener" target="_blank">Ir a Instagram</a>
+<a class="btn" href="https://wa.me/5492983579201" rel="noopener" target="_blank">WhatsApp directo</a>
+<a class="btn" href="productos.html">Ver productos</a>
+</div>
+</div>
+<div class="points-stack">
+<div class="points-card reveal">
+<div class="points-eyebrow">Dónde encontrarnos</div>
+<h2>Puntos de venta</h2>
+<p>Descubrí dónde encontrar Wailuku y consultá el mapa actualizado desde una vista simple, clara y conectada con la marca.</p>
+<div class="contact-actions">
+<a class="btn btn-primary" href="https://wailuku.my.canva.site/puntos-de-venta">
+                Ver puntos de venta
+              </a>
+</div>
+<div class="points-note">
+              Accedé al mapa completo con los puntos de venta disponibles y actualizados de Wailuku.
+            </div>
+</div>
+<div class="form-card reveal">
+<h2>Enviar consulta</h2>
+<p>Completá el formulario y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+<form onsubmit="event.preventDefault(); enviarWhatsApp();">
+<div class="form-grid">
+<div class="field">
+<label for="nombre">Nombre</label>
+<input id="nombre" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="field">
+<label for="contacto">Email o teléfono</label>
+<input id="contacto" placeholder="Cómo te contactamos" type="text"/>
+</div>
+<div class="field full">
+<label for="asunto">Asunto</label>
+<input id="asunto" placeholder="Compras, eventos, punto de venta..." type="text"/>
+</div>
+<div class="field full">
+<label for="mensaje">Mensaje</label>
+<textarea id="mensaje" placeholder="Contanos tu consulta"></textarea>
+</div>
+</div>
+<div class="contact-actions">
+<button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+</div>
+<div class="form-note">
+                Al hacer click, se abrirá WhatsApp con tu consulta armada automáticamente para enviarla de forma directa.
+              </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-wrap">
+<div class="container">
+<div class="cta-card reveal">
+<div>
+<h2>¿Querés vender Wailuku?</h2>
+<p>La página ya queda preparada para recibir consultas de locales, eventos y nuevas oportunidades comerciales desde cualquier sección de la web.</p>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" href="productos.html">Ver productos</a>
+<a class="btn" href="tragos.html">Explorar tragos</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-copy">Wailuku Gin — Argentina</div>
+<div class="footer-links">
+<a href="index_home.html">Inicio</a>
+<a href="historia.html">Historia</a>
+<a href="destilado.html">Destilado</a>
+<a href="botanicos.html">Botánicos</a>
+<a href="tragos.html">Tragos</a>
+<a href="contacto.html">Contacto</a>
+<a href="productos.html">Productos</a>
+<a href="https://wailuku.my.canva.site/puntos-de-venta">Puntos de venta</a>
+</div>
+</div>
+</footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function closeNav(){
+      document.body.classList.remove('nav-open');
+      if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if(navToggle && siteNav){
+      navToggle.addEventListener('click', () => {
+        const willOpen = !document.body.classList.contains('nav-open');
+        document.body.classList.toggle('nav-open', willOpen);
+        navToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+      siteNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeNav);
+      });
+      if(navOverlay){
+        navOverlay.addEventListener('click', closeNav);
+      }
+      window.addEventListener('resize', () => {
+        if(window.innerWidth > 760){
+          closeNav();
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if(event.key === 'Escape'){
+          closeNav();
+        }
+      });
+    }
+
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .14 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    function enviarWhatsApp() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const contacto = document.getElementById("contacto").value.trim();
+      const asunto = document.getElementById("asunto").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      if (!nombre || !mensaje) {
+        alert("Por favor completá al menos tu nombre y el mensaje.");
+        return;
+      }
+
+      const texto = `Hola, quiero consultar por Wailuku.
+
+👤 Nombre: ${nombre}
+📱 Contacto: ${contacto}
+📦 Asunto: ${asunto}
+📝 Mensaje: ${mensaje}`;
+
+      const numero = "5492983579201";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>

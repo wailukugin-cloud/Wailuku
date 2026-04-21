@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Historia — Wailuku Gin</title>
+<meta content="Conocé la historia de Wailuku Gin, su origen y la identidad detrás de la marca." name="description"/>
+<style>
+    :root{
+      --hero-image:url("assets/historia-mar-bn.jpg");
+      --bg:#060606; --text:#f3f0e9; --muted:rgba(243,240,233,.76); --muted-2:rgba(243,240,233,.56);
+      --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.14); --shadow:0 24px 80px rgba(0,0,0,.45);
+      --max:1320px; --pad:24px; --serif:ui-serif, Georgia, "Times New Roman", serif; --sans:Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--sans);color:var(--text);background:radial-gradient(1100px 700px at 50% -10%, rgba(255,255,255,.05), transparent 55%),radial-gradient(900px 600px at 82% 10%, rgba(255,255,255,.03), transparent 48%),var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+    a{text-decoration:none;color:inherit} img{display:block;max-width:100%}.container{width:min(var(--max),calc(100% - (var(--pad) * 2)));margin:0 auto}
+    .header{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(6,6,6,.66);border-bottom:1px solid rgba(255,255,255,.06)}
+    .header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}    .brand-mark{
+      width:16px;
+      height:20px;
+      object-fit:contain;
+      display:block;
+      flex:0 0 auto;
+      opacity:.96;
+    }
+    .nav{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px;flex-wrap:wrap}.nav a:hover{color:var(--text)} .nav-cta{padding:11px 16px;border:1px solid var(--line-strong);border-radius:999px;color:var(--text)!important}
+    .hero{padding:120px 0 36px}.hero-banner{position:relative;min-height:560px;border-radius:36px;overflow:hidden;border:1px solid rgba(255,255,255,.07);box-shadow:var(--shadow);background:
+        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.58)),
+        var(--hero-image) center/cover no-repeat;
+      display:flex;align-items:flex-end;padding:64px;isolation:isolate}
+    .hero-banner::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 32%, rgba(255,255,255,.07), transparent 42%);z-index:1;pointer-events:none}
+    .hero-overlay{position:relative;z-index:2;max-width:760px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:18px}.eyebrow::before{content:"";width:34px;height:1px;background:rgba(255,255,255,.34)}
+    .hero-overlay h1{margin:0;font-family:var(--serif);font-size:clamp(54px,8vw,110px);line-height:.94;font-weight:600;text-transform:uppercase;letter-spacing:.02em}.hero-overlay p{margin:20px 0 0;font-size:20px;line-height:1.8;color:var(--muted);max-width:34ch}
+    .section{padding:34px 0 0}.story-text{width:min(840px,100%);margin:0 auto;padding:16px 0 8px}.story-text p{margin:0;color:var(--muted);font-size:20px;line-height:2;text-align:left}
+    .meaning-card,.timeline-card{margin-top:12px;padding:42px;border-radius:32px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));box-shadow:var(--shadow)}
+    .meaning-card{text-align:center}.meaning-card .mini,.timeline-card .mini{display:block;margin-bottom:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)}
+    .meaning-card h2,.timeline-card h2{margin:0;font-family:var(--serif);font-size:clamp(40px,5vw,74px);line-height:1;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+    .meaning-card .submeaning{margin:14px 0 0;font-size:26px;font-family:var(--serif);color:var(--text)} .meaning-card p,.timeline-card p{margin:18px auto 0;max-width:46ch;color:var(--muted);font-size:16px;line-height:1.9}
+    .timeline-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-top:28px}.timeline-step{padding:28px;border-radius:28px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));box-shadow:var(--shadow)}
+    .timeline-step span{display:block;margin-bottom:12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)} .timeline-step h3{margin:0;font-family:var(--serif);font-size:32px;line-height:1.02;font-weight:600;text-transform:uppercase} .timeline-step p{margin:14px 0 0;color:var(--muted);font-size:16px;line-height:1.9}
+    .closing{padding:34px 0 18px;text-align:center}.closing blockquote{margin:0 auto;width:min(900px,100%);font-family:var(--serif);font-size:clamp(30px,4vw,56px);line-height:1.18;font-weight:600;letter-spacing:.01em;color:var(--text)}
+    .next-section{padding:22px 0 78px}.next-card{position:relative;overflow:hidden;min-height:280px;border-radius:34px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.01));box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:24px;padding:34px;isolation:isolate}.next-card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,.06), rgba(0,0,0,.22));z-index:1}.next-card .visual,.next-card .copy{position:relative;z-index:2}.next-card .visual{border-radius:24px;overflow:hidden;min-height:210px;background:rgba(255,255,255,.02)}.next-card .visual img{width:100%;height:100%;object-fit:cover;filter:brightness(.9);transition:transform .45s ease, filter .35s ease}.next-card:hover .visual img{transform:scale(1.04);filter:brightness(1)}.next-card .copy span{display:block;margin-bottom:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)}.next-card .copy h3{margin:0;font-family:var(--serif);font-size:clamp(34px,4vw,54px);line-height:1;font-weight:600;text-transform:uppercase}.next-card .copy p{margin:16px 0 0;max-width:30ch;color:var(--muted);font-size:16px;line-height:1.9}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--line-strong);color:var(--text);background:transparent;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s ease, background .2s ease, border-color .2s ease;margin-top:24px}.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.24)}
+    .footer{padding:0 0 48px;border-top:1px solid rgba(255,255,255,.06)}.footer-inner{padding-top:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-copy{color:var(--muted-2);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.footer-links{display:flex;align-items:center;gap:18px;color:var(--muted);font-size:14px;flex-wrap:wrap}.footer-links a:hover{color:var(--text)} .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease, transform .8s ease}.reveal.is-visible{opacity:1;transform:translateY(0)}
+    @media (max-width:980px){.timeline-grid,.next-card{grid-template-columns:1fr}.hero-banner{min-height:460px;padding:40px}.story-text p{font-size:18px}}
+    @media (max-width:760px){.header-inner{min-height:72px}.nav{gap:12px;font-size:13px}.nav a:not(.nav-cta){display:none}.hero{padding:110px 0 24px}.hero-banner{min-height:400px;padding:26px;border-radius:26px}.hero-overlay p{font-size:17px}.meaning-card,.timeline-card,.timeline-step,.next-card{padding:24px;border-radius:26px}.closing blockquote{font-size:34px}}
+  
+
+    /* Responsive mobile navigation + layout refinements */
+    .nav-toggle{
+      display:none;
+      align-items:center;
+      justify-content:center;
+      width:46px;
+      height:46px;
+      padding:0;
+      border-radius:999px;
+      border:1px solid var(--line-strong);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+      flex:0 0 auto;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .nav-toggle:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.24);
+    }
+    .nav-toggle-line{
+      position:relative;
+      display:block;
+      width:18px;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .25s ease, opacity .2s ease;
+    }
+    .nav-toggle-line::before,
+    .nav-toggle-line::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:18px;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .25s ease, top .25s ease, bottom .25s ease;
+    }
+    .nav-toggle-line::before{top:-6px}
+    .nav-toggle-line::after{bottom:-6px}
+    body.nav-open .nav-toggle-line{background:transparent}
+    body.nav-open .nav-toggle-line::before{top:0; transform:rotate(45deg)}
+    body.nav-open .nav-toggle-line::after{bottom:0; transform:rotate(-45deg)}
+
+    .nav-overlay{
+      display:none;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .25s ease;
+    }
+
+    @media (max-width: 980px){
+      :root{ --pad:20px; }
+      .hero-grid,
+      .about-grid,
+      .secondary-grid,
+      .contact-grid,
+      .products-grid,
+      .drinks-grid,
+      .timeline-grid,
+      .preview-grid,
+      .process-card,
+      .process-card.reverse,
+      .bottling-card,
+      .next-card,
+      .botanicals-grid{
+        grid-template-columns:1fr !important;
+      }
+      .botanical-card,
+      .botanical-card.wide,
+      .product-card{
+        grid-template-columns:1fr !important;
+      }
+      .hero-visual{min-height:480px}
+      .hero-bottle{max-height:500px}
+      .next-card .copy p,
+      .hero-sub,
+      .hero-overlay p{
+        max-width:none;
+      }
+    }
+
+    @media (max-width: 760px){
+      :root{ --pad:16px; }
+      .header-inner{
+        min-height:72px !important;
+        gap:12px;
+      }
+      .brand{
+        min-width:0;
+      }
+      .brand span{
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .nav-toggle{
+        display:inline-flex;
+      }
+      .nav{
+        position:fixed;
+        top:72px;
+        left:16px;
+        right:16px;
+        z-index:60;
+        display:flex !important;
+        flex-direction:column;
+        align-items:stretch;
+        gap:8px !important;
+        padding:16px;
+        border-radius:24px;
+        border:1px solid rgba(255,255,255,.1);
+        background:rgba(10,10,10,.96);
+        box-shadow:0 28px 80px rgba(0,0,0,.5);
+        max-height:calc(100vh - 96px);
+        overflow:auto;
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(-8px);
+        transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+      }
+      .nav a{
+        display:block !important;
+        width:100%;
+        padding:12px 14px;
+        border-radius:16px;
+        background:rgba(255,255,255,.03);
+        color:var(--text);
+      }
+      .nav .nav-cta{
+        padding:12px 14px;
+        text-align:center;
+      }
+      body.nav-open .nav{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:translateY(0);
+      }
+      .nav-overlay{
+        display:block;
+        position:fixed;
+        inset:72px 0 0 0;
+        z-index:55;
+        background:rgba(0,0,0,.48);
+        backdrop-filter:blur(2px);
+        -webkit-backdrop-filter:blur(2px);
+      }
+      body.nav-open .nav-overlay{
+        opacity:1;
+        pointer-events:auto;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:104px 0 32px !important;
+      }
+      .hero-banner{
+        min-height:380px !important;
+        padding:26px !important;
+        border-radius:26px !important;
+      }
+      .hero-grid{
+        gap:28px !important;
+      }
+      .hero-title{
+        max-width:none;
+        font-size:clamp(42px, 16vw, 72px) !important;
+      }
+      .hero-sub,
+      .hero-overlay p,
+      .intro p,
+      .story-text p,
+      .section-copy,
+      .contact-card p,
+      .form-card p,
+      .cta-card p,
+      .points-card p,
+      .summary-card p,
+      .highlight-card p,
+      .content p,
+      .product-copy p,
+      .botanical-card p,
+      .drink-card .service,
+      .next-card .copy p{
+        font-size:15px !important;
+        line-height:1.8 !important;
+      }
+      .hero-visual{
+        min-height:360px !important;
+      }
+      .hero-glow{
+        width:320px !important;
+        height:320px !important;
+      }
+      .hero-bottle{
+        max-height:340px !important;
+      }
+      .section{
+        padding:28px 0 0 !important;
+      }
+      .feature-link,
+      .summary-card,
+      .highlight-card,
+      .meaning-card,
+      .timeline-card,
+      .timeline-step,
+      .botanical-card,
+      .product-card,
+      .drink-card,
+      .process-card,
+      .contact-card,
+      .form-card,
+      .cta-card,
+      .points-card,
+      .next-card,
+      .preview-shell{
+        padding:24px !important;
+        border-radius:26px !important;
+      }
+      .media,
+      .product-image,
+      .next-card .visual{
+        min-height:220px !important;
+      }
+      .bottling-media{
+        min-height:280px !important;
+      }
+      .botanical-card.wide{
+        grid-column:span 1 !important;
+      }
+      .botanical-media img,
+      .botanical-card.wide .botanical-media img{
+        max-width:132px !important;
+        max-height:132px !important;
+      }
+      .form-grid{
+        grid-template-columns:1fr !important;
+      }
+      .contact-actions,
+      .hero-actions,
+      .actions,
+      .gate-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn,
+      .hero-actions .btn,
+      .actions .btn,
+      .contact-actions .btn,
+      .gate-actions .btn{
+        width:100%;
+      }
+      .footer-inner,
+      .footer-grid{
+        grid-template-columns:1fr !important;
+        justify-content:flex-start !important;
+        align-items:flex-start !important;
+      }
+      .footer-links{
+        gap:12px !important;
+      }
+    }
+</style>
+</head>
+<body>
+<header class="header"><div class="container header-inner"><a aria-label="Wailuku Gin" class="brand" href="index_home.html"><img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/><span>Wailuku Gin</span></a><nav aria-label="Navegación principal" class="nav" id="siteNav">
+<a href="productos.html">Productos</a>
+<a href="historia.html">Historia</a>
+<a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a>
+<a href="tragos.html">Tragos</a>
+<a href="contacto.html">Contacto</a>
+</nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button></div></header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
+<main>
+<section class="hero"><div class="container"><div class="hero-banner reveal"><div class="hero-overlay"><div class="eyebrow">Nuestra historia</div><h1>Historia</h1><p>El origen de una marca inspirada en la fuerza del mar, la identidad y el detalle.</p></div></div></div></section>
+<section class="section"><div class="container story-text reveal"><p>Wailuku nace en 2020 a partir de una idea clara: crear un gin con identidad propia, capaz de transmitir carácter, frescura y una estética cuidadosamente construida. Como todo proyecto que busca hacerse bien, su desarrollo llevó tiempo. Entre pruebas, decisiones y la búsqueda de una identidad auténtica, la marca fue tomando forma hasta concretarse finalmente en 2025, año en el que Wailuku se convierte en una realidad.</p></div></section>
+<section class="section"><div class="container"><div class="meaning-card reveal"><span class="mini">Significado</span><h2>Wailuku</h2><div class="submeaning">Inspirado en el mar</div><p>Su nombre proviene del hawaiano e inspira el corazón visual y emocional de la marca. La fuerza del mar, la profundidad de sus formas y una energía natural que deja huella se transforman en la esencia de Wailuku.</p></div></div></section>
+<section class="section"><div class="container timeline-grid"><article class="timeline-step reveal"><span>Origen</span><h3>2020</h3><p>La idea aparece con una búsqueda clara: crear un gin artesanal con personalidad, equilibrio y una estética propia.</p></article><article class="timeline-step reveal"><span>Desarrollo</span><h3>Proceso</h3><p>Pruebas, decisiones y ajustes fueron definiendo la receta, el carácter visual y la manera de presentar la marca.</p></article><article class="timeline-step reveal"><span>Concreción</span><h3>2025</h3><p>Wailuku se convierte en una realidad: una marca lista para expresar identidad, detalle y una presencia premium.</p></article></div></section>
+<section class="closing"><div class="container"><blockquote class="reveal">Inspirado en el mar. Definido por su identidad.</blockquote></div></section>
+<section class="next-section"><div class="container"><a aria-label="Ir a Destilación" class="next-card reveal" href="destilado.html"><div class="visual"><img alt="Destilación Wailuku" src="assets/destilacion-wailuku.jpg"/></div><div class="copy"><span>Siguiente capítulo</span><h3>Destilación</h3><p>Conocé el proceso detrás de cada lote, el equipo utilizado y la forma en que toma vida cada partida de Wailuku.</p><div class="btn">Explorar destilación</div></div></a></div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div class="footer-copy">Wailuku Gin — Argentina</div><div class="footer-links">
+<a href="index_home.html">Inicio</a>
+<a href="historia.html">Historia</a>
+<a href="destilado.html">Destilado</a>
+<a href="botanicos.html">Botánicos</a>
+<a href="tragos.html">Tragos</a>
+<a href="contacto.html">Contacto</a>
+<a href="productos.html">Productos</a>
+</div></div></footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function closeNav(){
+      document.body.classList.remove('nav-open');
+      if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if(navToggle && siteNav){
+      navToggle.addEventListener('click', () => {
+        const willOpen = !document.body.classList.contains('nav-open');
+        document.body.classList.toggle('nav-open', willOpen);
+        navToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+      siteNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeNav);
+      });
+      if(navOverlay){
+        navOverlay.addEventListener('click', closeNav);
+      }
+      window.addEventListener('resize', () => {
+        if(window.innerWidth > 760){
+          closeNav();
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if(event.key === 'Escape'){
+          closeNav();
+        }
+      });
+    }
+
+const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}})},{threshold:.14});document.querySelectorAll('.reveal').forEach((el)=>observer.observe(el));</script>
+</body>
+</html>
