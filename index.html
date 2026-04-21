@@ -922,6 +922,213 @@
   }
 </style>
 
+
+<style id="wailuku-april-global-refine">
+  @media (max-width: 760px){
+    .container{
+      width:min(var(--max, 1320px), calc(100% - 28px)) !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+    .nav{
+      background:#050505 !important;
+      border:1px solid rgba(255,255,255,.14) !important;
+      box-shadow:0 30px 90px rgba(0,0,0,.78) !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+      opacity:0 !important;
+      visibility:hidden !important;
+      pointer-events:none !important;
+      z-index:90 !important;
+    }
+    body.nav-open .nav{
+      opacity:1 !important;
+      visibility:visible !important;
+      pointer-events:auto !important;
+      transform:translateY(0) !important;
+    }
+    .nav a{
+      background:#101113 !important;
+      color:#f4f1ea !important;
+      font-size:15px !important;
+      font-weight:600 !important;
+      letter-spacing:.04em !important;
+      border:1px solid rgba(255,255,255,.04) !important;
+    }
+    .nav .nav-cta{
+      background:#f4f1ea !important;
+      color:#090909 !important;
+      border-color:#f4f1ea !important;
+    }
+    .nav-overlay{
+      background:rgba(0,0,0,.74) !important;
+      backdrop-filter:none !important;
+      -webkit-backdrop-filter:none !important;
+      z-index:85 !important;
+    }
+    .hero-overlay,
+    .intro,
+    .story-text,
+    .section-head > div,
+    .content,
+    .product-copy,
+    .contact-card,
+    .form-card,
+    .cta-card,
+    .points-card,
+    .summary-card,
+    .highlight-card,
+    .meaning-card,
+    .timeline-card,
+    .timeline-step,
+    .drink-card,
+    .botanical-copy,
+    .next-card .copy{
+      padding-inline:8px !important;
+      width:100% !important;
+      max-width:100% !important;
+      margin-left:auto !important;
+      margin-right:auto !important;
+      box-sizing:border-box !important;
+    }
+    .hero-overlay p,
+    .intro p,
+    .story-text p,
+    .section-copy,
+    .content p,
+    .product-copy p,
+    .contact-card p,
+    .form-card p,
+    .cta-card p,
+    .points-card p,
+    .summary-card p,
+    .highlight-card p,
+    .meaning-card p,
+    .timeline-card p,
+    .timeline-step p,
+    .drink-card p,
+    .drink-card .service,
+    .botanical-card p,
+    .next-card .copy p{
+      max-width:none !important;
+      margin-left:0 !important;
+      margin-right:0 !important;
+      padding-inline:0 !important;
+      word-break:normal !important;
+      overflow-wrap:break-word !important;
+    }
+  }
+</style>
+
+<style id="wailuku-index-april-refine">
+  @media (max-width: 760px){
+    .hero{
+      min-height:auto !important;
+      padding:102px 0 30px !important;
+      background-position:76% center !important;
+      background-size:cover !important;
+    }
+    .hero-grid{
+      gap:18px !important;
+      align-items:end !important;
+    }
+    .hero-title{
+      max-width:5.8ch !important;
+      font-size:clamp(40px, 15vw, 64px) !important;
+      line-height:.92 !important;
+    }
+    .hero-sub{
+      max-width:14ch !important;
+      font-size:14px !important;
+      line-height:1.75 !important;
+    }
+    .hero-actions{
+      margin-top:18px !important;
+      gap:10px !important;
+    }
+    .preview-grid{
+      grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+      gap:12px !important;
+    }
+    .product-preview-card{
+      min-height:205px !important;
+      border-radius:20px !important;
+      padding:10px !important;
+    }
+    .section-head{
+      margin-bottom:20px !important;
+    }
+    .section-title{
+      font-size:clamp(28px, 10vw, 46px) !important;
+      line-height:.98 !important;
+    }
+    .section-copy{
+      font-size:14px !important;
+      line-height:1.75 !important;
+    }
+    .about-grid{
+      grid-template-columns:repeat(4, minmax(0, 1fr)) !important;
+      gap:10px !important;
+      align-items:stretch !important;
+    }
+    .about-column{
+      display:contents !important;
+    }
+    .feature-link{
+      min-height:160px !important;
+      padding:12px !important;
+      border-radius:18px !important;
+      align-items:flex-end !important;
+    }
+    .feature-image{
+      border-radius:18px !important;
+    }
+    .feature-content span{
+      font-size:9px !important;
+      margin-bottom:6px !important;
+      letter-spacing:.12em !important;
+    }
+    .feature-content h3{
+      font-size:15px !important;
+      line-height:1 !important;
+      margin:0 !important;
+    }
+    .feature-content p{
+      margin-top:8px !important;
+      font-size:10px !important;
+      line-height:1.45 !important;
+    }
+    .secondary-grid{
+      grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+      gap:10px !important;
+    }
+    .secondary-card{
+      min-height:146px !important;
+      padding:14px !important;
+      border-radius:18px !important;
+    }
+    .secondary-icon{
+      width:28px !important;
+      height:28px !important;
+      margin-bottom:10px !important;
+    }
+    .secondary-card span{
+      font-size:9px !important;
+      margin-bottom:6px !important;
+      letter-spacing:.12em !important;
+    }
+    .secondary-card h3{
+      font-size:15px !important;
+      line-height:1 !important;
+    }
+    .secondary-card p{
+      margin-top:8px !important;
+      font-size:10px !important;
+      line-height:1.45 !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
