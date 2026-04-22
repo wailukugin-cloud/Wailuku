@@ -1091,6 +1091,160 @@
 }
 </style>
 
+
+<style id="wailuku-unified-nav">
+  .header{z-index:220 !important;}
+  .header-inner{position:relative;}
+  .nav-toggle{
+    display:inline-flex !important;
+    position:relative;
+    z-index:235;
+  }
+  .nav{
+    position:fixed !important;
+    top:88px !important;
+    right:24px !important;
+    left:auto !important;
+    width:min(360px, calc(100vw - 32px)) !important;
+    z-index:230 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:8px !important;
+    padding:16px !important;
+    border-radius:24px !important;
+    border:1px solid rgba(255,255,255,.12) !important;
+    background:rgba(8,8,8,.98) !important;
+    box-shadow:0 28px 80px rgba(0,0,0,.6) !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(-8px) !important;
+    transition:opacity .25s ease, transform .25s ease, visibility .25s ease !important;
+    max-height:calc(100vh - 112px) !important;
+    overflow:auto !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .nav a{
+    display:block !important;
+    width:100% !important;
+    padding:12px 14px !important;
+    border-radius:16px !important;
+    background:rgba(255,255,255,.04) !important;
+    color:var(--text) !important;
+    font-size:15px !important;
+    font-weight:600 !important;
+    letter-spacing:.02em !important;
+    text-transform:none !important;
+    border:1px solid transparent !important;
+  }
+  .nav a:hover{
+    background:rgba(255,255,255,.08) !important;
+    border-color:rgba(255,255,255,.1) !important;
+  }
+  .nav .nav-cta{
+    background:rgba(255,255,255,.92) !important;
+    color:#090909 !important;
+    border-color:rgba(255,255,255,.92) !important;
+    text-align:center !important;
+  }
+  body.nav-open .nav{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateY(0) !important;
+  }
+  .nav-overlay{
+    display:block !important;
+    position:fixed !important;
+    inset:0 !important;
+    z-index:225 !important;
+    background:rgba(0,0,0,.56) !important;
+    opacity:0 !important;
+    pointer-events:none !important;
+    transition:opacity .25s ease !important;
+  }
+  body.nav-open .nav-overlay{
+    opacity:1 !important;
+    pointer-events:auto !important;
+  }
+  body.nav-open{
+    overflow:hidden !important;
+  }
+  @media (max-width:760px){
+    .nav{
+      top:72px !important;
+      right:16px !important;
+      left:16px !important;
+      width:auto !important;
+      max-height:calc(100vh - 88px) !important;
+    }
+  }
+</style>
+
+
+<style id="wailuku-index-hero-mobile-fix">
+@media (max-width:760px){
+  .hero{
+    background-position:116% 52% !important;
+    background-size:auto 82% !important;
+    min-height:760px !important;
+    padding:104px 0 34px !important;
+  }
+  .hero-grid{
+    grid-template-columns:1fr !important;
+    align-items:start !important;
+    gap:18px !important;
+  }
+  .hero-grid > .reveal:first-child{
+    width:44% !important;
+    max-width:44% !important;
+    position:relative !important;
+    z-index:2 !important;
+  }
+  .hero-title{
+    max-width:5.1ch !important;
+    font-size:clamp(36px, 12.5vw, 58px) !important;
+    line-height:.92 !important;
+  }
+  .hero-sub{
+    max-width:10ch !important;
+    font-size:14px !important;
+    line-height:1.7 !important;
+    margin-top:16px !important;
+  }
+  .hero-actions{
+    width:min(340px, calc(100vw - 32px)) !important;
+    max-width:min(340px, calc(100vw - 32px)) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:12px !important;
+    margin-top:20px !important;
+  }
+  .hero-actions .btn{
+    width:100% !important;
+    margin-top:0 !important;
+  }
+  .hero-visual{
+    display:none !important;
+  }
+}
+@media (max-width:420px){
+  .hero{
+    background-position:124% 54% !important;
+    background-size:auto 78% !important;
+  }
+  .hero-grid > .reveal:first-child{
+    width:42% !important;
+    max-width:42% !important;
+  }
+  .hero-title{
+    font-size:clamp(34px, 12vw, 54px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
@@ -1109,7 +1263,7 @@
 <img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/>
 <span>Wailuku Gin</span>
 </a>
-<nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button>
+<nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilación</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a><a class="nav-cta" href="https://wailuku.my.canva.site/puntos-de-venta" rel="noopener" target="_blank">Puntos de venta</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button>
 </div>
 </header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
@@ -1238,7 +1392,7 @@
 <p class="footer-copy">Gin artesanal inspirado en la fuerza del mar. Una marca construida desde el detalle, la identidad visual y el trabajo en pequeños lotes.</p>
 <div class="legal">Contenido exclusivo para mayores de 18 años. Beber con moderación.</div>
 </div>
-<div class="footer-links"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="contacto.html">Contacto</a><a href="productos.html">Productos</a></div>
+<div class="footer-links"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilación</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a><a href="https://wailuku.my.canva.site/puntos-de-venta" rel="noopener" target="_blank">Puntos de venta</a></div>
 </div>
 </footer>
 <script>
@@ -1264,7 +1418,7 @@
         navOverlay.addEventListener('click', closeNav);
       }
       window.addEventListener('resize', () => {
-        if(window.innerWidth > 760){
+        if(window.innerWidth > 760 && document.body.classList.contains('nav-open')){
           closeNav();
         }
       });
@@ -1346,30 +1500,64 @@
 </script>
 
 
+
 <script id="wailuku-v5-nav-js">
 (function(){
   function setupNav(){
+    var body = document.body;
     var nav = document.getElementById('siteNav');
     var navToggle = document.getElementById('navToggle');
-    if(!nav) return;
+    var navOverlay = document.getElementById('navOverlay');
+    if(!nav || !navToggle || !navOverlay) return;
+
+    function closeNav(){
+      body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Abrir menú');
+    }
+
+    function openNav(){
+      body.classList.add('nav-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Cerrar menú');
+    }
+
+    if(navToggle.dataset.bound === '1') return;
+    navToggle.dataset.bound = '1';
+
+    navToggle.addEventListener('click', function(event){
+      event.preventDefault();
+      event.stopPropagation();
+      if(body.classList.contains('nav-open')){
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    navOverlay.addEventListener('click', closeNav);
+
     nav.querySelectorAll('a[href]').forEach(function(link){
-      if(link.dataset.navBound === '1') return;
-      link.dataset.navBound = '1';
-      var handler = function(e){
-        var href = link.getAttribute('href');
-        if(!href || href.charAt(0) === '#') return;
-        if(window.innerWidth <= 760){
-          e.preventDefault();
-          e.stopPropagation();
-          document.body.classList.remove('nav-open');
-          if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
-          window.setTimeout(function(){ window.location.href = href; }, 20);
-        }
-      };
-      link.addEventListener('click', handler, {passive:false});
-      link.addEventListener('touchend', handler, {passive:false});
+      link.addEventListener('click', function(){
+        closeNav();
+      });
+    });
+
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape'){
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', function(){
+      if(window.innerHeight < 420){
+        nav.style.maxHeight = 'calc(100vh - 24px)';
+      } else {
+        nav.style.maxHeight = '';
+      }
     });
   }
+
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', setupNav);
   } else {
@@ -1377,6 +1565,7 @@
   }
 })();
 </script>
+
 
 </body>
 </html>

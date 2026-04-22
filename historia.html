@@ -453,15 +453,101 @@
 }
 </style>
 
+
+<style id="wailuku-unified-nav">
+  .header{z-index:220 !important;}
+  .header-inner{position:relative;}
+  .nav-toggle{
+    display:inline-flex !important;
+    position:relative;
+    z-index:235;
+  }
+  .nav{
+    position:fixed !important;
+    top:88px !important;
+    right:24px !important;
+    left:auto !important;
+    width:min(360px, calc(100vw - 32px)) !important;
+    z-index:230 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:8px !important;
+    padding:16px !important;
+    border-radius:24px !important;
+    border:1px solid rgba(255,255,255,.12) !important;
+    background:rgba(8,8,8,.98) !important;
+    box-shadow:0 28px 80px rgba(0,0,0,.6) !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(-8px) !important;
+    transition:opacity .25s ease, transform .25s ease, visibility .25s ease !important;
+    max-height:calc(100vh - 112px) !important;
+    overflow:auto !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .nav a{
+    display:block !important;
+    width:100% !important;
+    padding:12px 14px !important;
+    border-radius:16px !important;
+    background:rgba(255,255,255,.04) !important;
+    color:var(--text) !important;
+    font-size:15px !important;
+    font-weight:600 !important;
+    letter-spacing:.02em !important;
+    text-transform:none !important;
+    border:1px solid transparent !important;
+  }
+  .nav a:hover{
+    background:rgba(255,255,255,.08) !important;
+    border-color:rgba(255,255,255,.1) !important;
+  }
+  .nav .nav-cta{
+    background:rgba(255,255,255,.92) !important;
+    color:#090909 !important;
+    border-color:rgba(255,255,255,.92) !important;
+    text-align:center !important;
+  }
+  body.nav-open .nav{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateY(0) !important;
+  }
+  .nav-overlay{
+    display:block !important;
+    position:fixed !important;
+    inset:0 !important;
+    z-index:225 !important;
+    background:rgba(0,0,0,.56) !important;
+    opacity:0 !important;
+    pointer-events:none !important;
+    transition:opacity .25s ease !important;
+  }
+  body.nav-open .nav-overlay{
+    opacity:1 !important;
+    pointer-events:auto !important;
+  }
+  body.nav-open{
+    overflow:hidden !important;
+  }
+  @media (max-width:760px){
+    .nav{
+      top:72px !important;
+      right:16px !important;
+      left:16px !important;
+      width:auto !important;
+      max-height:calc(100vh - 88px) !important;
+    }
+  }
+</style>
+
 </head>
 <body>
-<header class="header"><div class="container header-inner"><a aria-label="Wailuku Gin" class="brand" href="index.html"><img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/><span>Wailuku Gin</span></a><nav aria-label="Navegación principal" class="nav" id="siteNav">
-<a href="productos.html">Productos</a>
-<a href="historia.html">Historia</a>
-<a href="destilado.html">Destilado</a><a href="botanicos.html">Botánicos</a>
-<a href="tragos.html">Tragos</a>
-<a href="contacto.html">Contacto</a>
-</nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button></div></header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
+<header class="header"><div class="container header-inner"><a aria-label="Wailuku Gin" class="brand" href="index.html"><img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/><span>Wailuku Gin</span></a><nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilación</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a><a class="nav-cta" href="https://wailuku.my.canva.site/puntos-de-venta" rel="noopener" target="_blank">Puntos de venta</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button></div></header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
 <section class="hero"><div class="container"><div class="hero-banner reveal"><div class="hero-overlay"><div class="eyebrow">Nuestra historia</div><h1>Historia</h1><p>El origen de una marca inspirada en la fuerza del mar, la identidad y el detalle.</p></div></div></div></section>
 <section class="section"><div class="container story-text reveal"><p>Wailuku nace en 2020 a partir de una idea clara: crear un gin con identidad propia, capaz de transmitir carácter, frescura y una estética cuidadosamente construida. Como todo proyecto que busca hacerse bien, su desarrollo llevó tiempo. Entre pruebas, decisiones y la búsqueda de una identidad auténtica, la marca fue tomando forma hasta concretarse finalmente en 2025, año en el que Wailuku se convierte en una realidad.</p></div></section>
@@ -470,15 +556,7 @@
 <section class="closing"><div class="container"><blockquote class="reveal">Inspirado en el mar. Definido por su identidad.</blockquote></div></section>
 <section class="next-section"><div class="container"><a aria-label="Ir a Destilación" class="next-card reveal" href="destilado.html"><div class="visual"><img alt="Destilación Wailuku" src="assets/destilacion-wailuku.jpg"/></div><div class="copy"><span>Siguiente capítulo</span><h3>Destilación</h3><p>Conocé el proceso detrás de cada lote, el equipo utilizado y la forma en que toma vida cada partida de Wailuku.</p><div class="btn">Explorar destilación</div></div></a></div></section>
 </main>
-<footer class="footer"><div class="container footer-inner"><div class="footer-copy">Wailuku Gin — Argentina</div><div class="footer-links">
-<a href="index.html">Inicio</a>
-<a href="historia.html">Historia</a>
-<a href="destilado.html">Destilado</a>
-<a href="botanicos.html">Botánicos</a>
-<a href="tragos.html">Tragos</a>
-<a href="contacto.html">Contacto</a>
-<a href="productos.html">Productos</a>
-</div></div></footer>
+<footer class="footer"><div class="container footer-inner"><div class="footer-copy">Wailuku Gin — Argentina</div><div class="footer-links"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilación</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a><a href="https://wailuku.my.canva.site/puntos-de-venta" rel="noopener" target="_blank">Puntos de venta</a></div></div></footer>
 <script>
     const navToggle = document.getElementById('navToggle');
     const siteNav = document.getElementById('siteNav');
@@ -539,30 +617,64 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if
 </script>
 
 
+
 <script id="wailuku-v5-nav-js">
 (function(){
   function setupNav(){
+    var body = document.body;
     var nav = document.getElementById('siteNav');
     var navToggle = document.getElementById('navToggle');
-    if(!nav) return;
+    var navOverlay = document.getElementById('navOverlay');
+    if(!nav || !navToggle || !navOverlay) return;
+
+    function closeNav(){
+      body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Abrir menú');
+    }
+
+    function openNav(){
+      body.classList.add('nav-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Cerrar menú');
+    }
+
+    if(navToggle.dataset.bound === '1') return;
+    navToggle.dataset.bound = '1';
+
+    navToggle.addEventListener('click', function(event){
+      event.preventDefault();
+      event.stopPropagation();
+      if(body.classList.contains('nav-open')){
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    navOverlay.addEventListener('click', closeNav);
+
     nav.querySelectorAll('a[href]').forEach(function(link){
-      if(link.dataset.navBound === '1') return;
-      link.dataset.navBound = '1';
-      var handler = function(e){
-        var href = link.getAttribute('href');
-        if(!href || href.charAt(0) === '#') return;
-        if(window.innerWidth <= 760){
-          e.preventDefault();
-          e.stopPropagation();
-          document.body.classList.remove('nav-open');
-          if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
-          window.setTimeout(function(){ window.location.href = href; }, 20);
-        }
-      };
-      link.addEventListener('click', handler, {passive:false});
-      link.addEventListener('touchend', handler, {passive:false});
+      link.addEventListener('click', function(){
+        closeNav();
+      });
+    });
+
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape'){
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', function(){
+      if(window.innerHeight < 420){
+        nav.style.maxHeight = 'calc(100vh - 24px)';
+      } else {
+        nav.style.maxHeight = '';
+      }
     });
   }
+
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', setupNav);
   } else {
@@ -570,6 +682,7 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if
   }
 })();
 </script>
+
 
 </body>
 </html>
