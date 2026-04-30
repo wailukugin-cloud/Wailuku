@@ -1184,66 +1184,7 @@
 </style>
 
 
-<style id="wailuku-index-hero-mobile-fix">
-@media (max-width:760px){
-  .hero{
-    background-position:116% 52% !important;
-    background-size:auto 82% !important;
-    min-height:760px !important;
-    padding:104px 0 34px !important;
-  }
-  .hero-grid{
-    grid-template-columns:1fr !important;
-    align-items:start !important;
-    gap:18px !important;
-  }
-  .hero-grid > .reveal:first-child{
-    width:44% !important;
-    max-width:44% !important;
-    position:relative !important;
-    z-index:2 !important;
-  }
-  .hero-title{
-    max-width:5.1ch !important;
-    font-size:clamp(36px, 12.5vw, 58px) !important;
-    line-height:.92 !important;
-  }
-  .hero-sub{
-    max-width:10ch !important;
-    font-size:14px !important;
-    line-height:1.7 !important;
-    margin-top:16px !important;
-  }
-  .hero-actions{
-    width:min(340px, calc(100vw - 32px)) !important;
-    max-width:min(340px, calc(100vw - 32px)) !important;
-    display:flex !important;
-    flex-direction:column !important;
-    gap:12px !important;
-    margin-top:20px !important;
-  }
-  .hero-actions .btn{
-    width:100% !important;
-    margin-top:0 !important;
-  }
-  .hero-visual{
-    display:none !important;
-  }
-}
-@media (max-width:420px){
-  .hero{
-    background-position:124% 54% !important;
-    background-size:auto 78% !important;
-  }
-  .hero-grid > .reveal:first-child{
-    width:42% !important;
-    max-width:42% !important;
-  }
-  .hero-title{
-    font-size:clamp(34px, 12vw, 54px) !important;
-  }
-}
-</style>
+
 
 
 
@@ -1272,6 +1213,77 @@
   body.nav-open .nav a{
     pointer-events:auto !important;
   }
+</style>
+
+
+<style id="wailuku-responsive-final-adjustments">
+html, body{max-width:100%; overflow-x:hidden;}
+img, video{max-width:100%; height:auto;}
+@media (max-width:980px){
+  :root{--pad:20px;}
+  .hero-banner{min-height:clamp(430px,68vh,620px)!important;padding:clamp(28px,7vw,48px)!important;border-radius:28px!important;background-size:cover!important;background-position:center center!important;}
+  .hero-overlay{max-width:100%!important;}
+  .hero-overlay h1{font-size:clamp(46px,14vw,86px)!important;}
+  .hero-overlay p{max-width:40ch!important;font-size:clamp(16px,4vw,19px)!important;line-height:1.65!important;}
+  .process-card,.process-card.reverse,.bottling-card,.products-grid,.product-card,.contact-grid,.drinks-grid,.timeline-grid,.botanicals-grid,.botanical-card,.botanical-card.wide,.next-card{grid-template-columns:1fr!important;}
+  .process-card.reverse .media,.process-card.reverse .content{order:initial!important;}
+  .next-card{gap:20px!important;}
+  .product-image img,.product-preview-card img,.media img,.next-card .visual img{width:100%;height:100%;}
+}
+@media (max-width:760px){
+  :root{--pad:16px;}
+  .header{z-index:500!important;}
+  .header-inner{min-height:72px!important;}
+  .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .nav{z-index:520!important;}
+  .nav-overlay{z-index:510!important;}
+  .hero{padding-top:104px!important;}
+  .hero-banner{min-height:clamp(390px,64vh,540px)!important;padding:28px!important;border-radius:24px!important;}
+  .hero-overlay h1{font-size:clamp(42px,15vw,72px)!important;line-height:.94!important;}
+  .eyebrow{letter-spacing:.14em!important;font-size:10px!important;}
+  .intro p,.story-text p{font-size:16px!important;line-height:1.75!important;}
+  .section{padding-top:28px!important;}
+  .summary-card,.highlight-card,.meaning-card,.timeline-card,.contact-card,.form-card,.cta-card,.points-card,.drink-card,.product-card,.process-card,.botanical-card,.info-card{padding:24px!important;border-radius:26px!important;}
+  .preview-shell{padding:20px!important;border-radius:26px!important;}
+  .product-preview-card{min-height:360px!important;}
+  .product-image,.media,.next-card .visual{min-height:260px!important;}
+  .bottling-media{min-height:380px!important;}
+  .botanical-media{min-height:150px!important;}
+  .botanical-media img{max-width:150px!important;max-height:150px!important;}
+  .btn{width:100%;max-width:100%;text-align:center;}
+  .footer-inner,.footer-grid{gap:16px!important;}
+}
+@media (max-width:420px){
+  .hero-banner{padding:24px!important;}
+  .hero-overlay h1{font-size:clamp(38px,14vw,62px)!important;}
+}
+</style>
+
+<style id="wailuku-index-mobile-final">
+@media (max-width:980px){
+  .hero{min-height:auto!important;padding:102px 0 54px!important;background-size:auto 100%!important;background-position:68% center!important;}
+  .hero::before{content:""!important;position:absolute!important;inset:0!important;pointer-events:none!important;background:linear-gradient(90deg, rgba(0,0,0,.90) 0%, rgba(0,0,0,.70) 45%, rgba(0,0,0,.18) 100%)!important;z-index:0!important;}
+  .hero-grid{grid-template-columns:1fr!important;gap:24px!important;min-height:clamp(650px,82vh,820px)!important;align-content:center!important;}
+  .hero-grid > .reveal:first-child{width:min(62%,430px)!important;max-width:min(62%,430px)!important;position:relative!important;z-index:2!important;}
+  .hero-title{max-width:7ch!important;font-size:clamp(46px,13vw,78px)!important;}
+  .hero-sub{max-width:32ch!important;font-size:16px!important;line-height:1.65!important;}
+  .hero-actions{width:min(430px,100%)!important;display:flex!important;flex-direction:column!important;gap:12px!important;}
+  .hero-actions .btn{width:100%!important;margin-top:0!important;}
+  .hero-visual{display:none!important;}
+}
+@media (max-width:760px){
+  .hero{background-size:auto 96%!important;background-position:67% center!important;}
+  .hero-grid{min-height:720px!important;align-content:center!important;}
+  .hero-grid > .reveal:first-child{width:min(68%,330px)!important;max-width:min(68%,330px)!important;}
+  .hero-sub{max-width:30ch!important;}
+}
+@media (max-width:420px){
+  .hero{background-size:auto 92%!important;background-position:66% center!important;}
+  .hero-grid{min-height:700px!important;}
+  .hero-grid > .reveal:first-child{width:70%!important;max-width:70%!important;}
+  .hero-title{font-size:clamp(40px,12.8vw,58px)!important;}
+  .hero-sub{font-size:15px!important;max-width:28ch!important;}
+}
 </style>
 
 </head>
@@ -1316,7 +1328,7 @@
 <div class="container">
 <div class="preview-shell reveal">
 <div class="preview-cta">
-<a class="btn btn-primary" href="productos.html">Ver productos</a>
+<a class="btn btn-primary" href="productos.html">Explorar productos</a>
 </div>
 <div class="preview-grid">
 <a class="product-preview-card" href="productos.html">
