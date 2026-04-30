@@ -704,6 +704,35 @@
   }
 </style>
 
+
+
+<style id="wailuku-menu-definitive-fix">
+  /* Corrección definitiva del menú hamburguesa:
+     el overlay queda por debajo del header/nav para no bloquear los links. */
+  .header{
+    z-index:1000 !important;
+  }
+  .nav{
+    z-index:1002 !important;
+  }
+  .nav-toggle{
+    position:relative !important;
+    z-index:1003 !important;
+    pointer-events:auto !important;
+  }
+  .nav-overlay{
+    z-index:900 !important;
+  }
+  body.nav-open .nav{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+  }
+  body.nav-open .nav a{
+    pointer-events:auto !important;
+  }
+</style>
+
 </head>
 <body>
 <header class="header">
@@ -959,6 +988,62 @@
 })();
 </script>
 
+
+
+
+<script id="wailuku-menu-definitive-js">
+(function(){
+  function initWailukuMenu(){
+    var body = document.body;
+    var nav = document.getElementById('siteNav');
+    var toggle = document.getElementById('navToggle');
+    var overlay = document.getElementById('navOverlay');
+    if(!body || !nav || !toggle) return;
+
+    function closeMenu(){
+      body.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Abrir menú');
+    }
+
+    function openMenu(){
+      body.classList.add('nav-open');
+      toggle.setAttribute('aria-expanded','true');
+      toggle.setAttribute('aria-label','Cerrar menú');
+    }
+
+    function toggleMenu(event){
+      if(event){
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      body.classList.contains('nav-open') ? closeMenu() : openMenu();
+    }
+
+    toggle.onclick = toggleMenu;
+
+    if(overlay){
+      overlay.onclick = closeMenu;
+    }
+
+    nav.querySelectorAll('a[href]').forEach(function(link){
+      link.onclick = function(){
+        closeMenu();
+      };
+    });
+
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape') closeMenu();
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initWailukuMenu);
+  }else{
+    initWailukuMenu();
+  }
+})();
+</script>
 
 </body>
 </html>

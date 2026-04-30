@@ -545,13 +545,42 @@
   }
 </style>
 
+
+
+<style id="wailuku-menu-definitive-fix">
+  /* Corrección definitiva del menú hamburguesa:
+     el overlay queda por debajo del header/nav para no bloquear los links. */
+  .header{
+    z-index:1000 !important;
+  }
+  .nav{
+    z-index:1002 !important;
+  }
+  .nav-toggle{
+    position:relative !important;
+    z-index:1003 !important;
+    pointer-events:auto !important;
+  }
+  .nav-overlay{
+    z-index:900 !important;
+  }
+  body.nav-open .nav{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+  }
+  body.nav-open .nav a{
+    pointer-events:auto !important;
+  }
+</style>
+
 </head>
 <body>
 <header class="header"><div class="container header-inner"><a aria-label="Wailuku Gin" class="brand" href="index.html"><img alt="" aria-hidden="true" class="brand-mark" src="assets/tridente.png"/><span>Wailuku Gin</span></a><nav aria-label="Navegación principal" class="nav" id="siteNav"><a href="index.html">Inicio</a><a href="historia.html">Historia</a><a href="destilado.html">Destilación</a><a href="botanicos.html">Botánicos</a><a href="tragos.html">Tragos</a><a href="productos.html">Productos</a><a href="contacto.html">Contacto</a><a class="nav-cta" href="https://wailuku.my.canva.site/puntos-de-venta" rel="noopener" target="_blank">Puntos de venta</a></nav><button aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle" type="button"><span aria-hidden="true" class="nav-toggle-line"></span></button></div></header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
 <section class="hero"><div class="container"><div class="hero-banner reveal"><div class="hero-overlay"><div class="eyebrow">Nuestra historia</div><h1>Historia</h1><p>El origen de una marca inspirada en la fuerza del mar, la identidad y el detalle.</p></div></div></div></section>
 <section class="section"><div class="container story-text reveal"><p>Wailuku nace en 2020 a partir de una idea clara: crear un gin con identidad propia, capaz de transmitir carácter, frescura y una estética cuidadosamente construida. Como todo proyecto que busca hacerse bien, su desarrollo llevó tiempo. Entre pruebas, decisiones y la búsqueda de una identidad auténtica, la marca fue tomando forma hasta concretarse finalmente en 2025, año en el que Wailuku se convierte en una realidad.</p></div></section>
-<section class="section"><div class="container"><div class="meaning-card reveal"><span class="mini">Significado</span><h2>Wailuku</h2><div class="submeaning">Inspirado en el mar</div><p>Su nombre proviene del hawaiano e inspira el corazón visual y emocional de la marca. La fuerza del mar, la profundidad de sus formas y una energía natural que deja huella se transforman en la esencia de Wailuku.</p></div></div></section>
+<section class="section"><div class="container"><div class="meaning-card reveal"><span class="mini">Significado</span><h2>Wailuku</h2><div class="submeaning">"AGUAS DE DESTRUCCION"</div><p>Su nombre proviene del hawaiano e inspira el corazón visual y emocional de la marca. La fuerza del mar, la profundidad de sus formas y una energía natural que deja huella se transforman en la esencia de Wailuku.</p></div></div></section>
 <section class="section"><div class="container timeline-grid"><article class="timeline-step reveal"><span>Origen</span><h3>2020</h3><p>La idea aparece con una búsqueda clara: crear un gin artesanal con personalidad, equilibrio y una estética propia.</p></article><article class="timeline-step reveal"><span>Desarrollo</span><h3>Proceso</h3><p>Pruebas, decisiones y ajustes fueron definiendo la receta, el carácter visual y la manera de presentar la marca.</p></article><article class="timeline-step reveal"><span>Concreción</span><h3>2025</h3><p>Wailuku se convierte en una realidad: una marca lista para expresar identidad, detalle y una presencia premium.</p></article></div></section>
 <section class="closing"><div class="container"><blockquote class="reveal">Inspirado en el mar. Definido por su identidad.</blockquote></div></section>
 <section class="next-section"><div class="container"><a aria-label="Ir a Destilación" class="next-card reveal" href="destilado.html"><div class="visual"><img alt="Destilación Wailuku" src="assets/destilacion-wailuku.jpg"/></div><div class="copy"><span>Siguiente capítulo</span><h3>Destilación</h3><p>Conocé el proceso detrás de cada lote, el equipo utilizado y la forma en que toma vida cada partida de Wailuku.</p><div class="btn">Explorar destilación</div></div></a></div></section>
@@ -683,6 +712,62 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if
 })();
 </script>
 
+
+
+
+<script id="wailuku-menu-definitive-js">
+(function(){
+  function initWailukuMenu(){
+    var body = document.body;
+    var nav = document.getElementById('siteNav');
+    var toggle = document.getElementById('navToggle');
+    var overlay = document.getElementById('navOverlay');
+    if(!body || !nav || !toggle) return;
+
+    function closeMenu(){
+      body.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Abrir menú');
+    }
+
+    function openMenu(){
+      body.classList.add('nav-open');
+      toggle.setAttribute('aria-expanded','true');
+      toggle.setAttribute('aria-label','Cerrar menú');
+    }
+
+    function toggleMenu(event){
+      if(event){
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      body.classList.contains('nav-open') ? closeMenu() : openMenu();
+    }
+
+    toggle.onclick = toggleMenu;
+
+    if(overlay){
+      overlay.onclick = closeMenu;
+    }
+
+    nav.querySelectorAll('a[href]').forEach(function(link){
+      link.onclick = function(){
+        closeMenu();
+      };
+    });
+
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape') closeMenu();
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initWailukuMenu);
+  }else{
+    initWailukuMenu();
+  }
+})();
+</script>
 
 </body>
 </html>
