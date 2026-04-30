@@ -1297,6 +1297,45 @@ img, video{max-width:100%; height:auto;}
 }
 </style>
 
+
+<style id="wailuku-mobile-hero-reference-final">
+/* Ajuste final solicitado: solo móvil. Desktop queda intacto. */
+@media (max-width: 760px){
+  :root{ --hero-home-image: url("assets/home-hero-mobile.jpg"); }
+
+  .hero{
+    min-height: 650px !important;
+    padding: 92px 0 24px !important;
+    align-items: flex-start !important;
+    background: var(--hero-home-image) 82% top / auto 100% no-repeat !important;
+    overflow: hidden !important;
+  }
+  .hero > .container{ position: relative !important; z-index: 2 !important; }
+  .hero-grid{ display:grid !important; grid-template-columns:1fr !important; align-items:start !important; gap:0 !important; min-height:auto !important; }
+  .hero-grid > .reveal:first-child{ max-width:100% !important; width:100% !important; padding-top:74px !important; position:relative !important; z-index:3 !important; }
+  .eyebrow{ margin-bottom:18px !important; font-size:11px !important; letter-spacing:.18em !important; }
+  .hero-title{ max-width:7ch !important; font-size:clamp(52px,15vw,74px) !important; line-height:.92 !important; margin:0 !important; }
+  .hero-sub{ max-width:31ch !important; margin:28px 0 0 58px !important; font-size:18px !important; line-height:1.55 !important; color:rgba(244,241,234,.82) !important; }
+  .hero-actions{ margin-top:34px !important; width:min(100%,510px) !important; display:flex !important; }
+  .hero-actions .btn{ width:100% !important; min-height:80px !important; border-radius:999px !important; background:rgba(0,0,0,.18) !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; }
+  .hero-visual,.hero-glow,.hero-bottle{ display:none !important; }
+
+  .shop-preview, .shop-preview.section{ padding-top:34px !important; }
+  .preview-shell{ padding:34px 16px 24px !important; border-radius:28px !important; }
+  .preview-cta{ margin-bottom:34px !important; }
+  .preview-cta .btn{ width:min(100%,560px) !important; min-height:80px !important; }
+  .preview-grid{ grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:22px !important; }
+  .product-preview-card{ min-height:310px !important; border-radius:24px !important; }
+}
+@media (max-width:420px){
+  .hero{ min-height:628px !important; padding-top:86px !important; background-position:84% top !important; }
+  .hero-grid > .reveal:first-child{ padding-top:62px !important; }
+  .hero-title{ font-size:clamp(48px,15vw,66px) !important; }
+  .hero-sub{ max-width:29ch !important; margin-left:56px !important; font-size:17px !important; }
+  .hero-actions .btn,.preview-cta .btn{ min-height:74px !important; }
+  .product-preview-card{ min-height:280px !important; }
+}
+</style>
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
