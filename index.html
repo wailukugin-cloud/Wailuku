@@ -809,6 +809,17 @@
         gap:12px !important;
       }
     }
+
+
+/* === WAILUKU: HERO MOBILE IMAGE SUPPORT === */
+@media (max-width: 760px) {
+  :root {
+    --hero-home-image: url("assets/home-hero-mobile.jpg");
+  }
+  .hero {
+    background: var(--hero-home-image) center center / cover no-repeat !important;
+  }
+}
 </style>
 
 <style id="wailuku-final-fixes">

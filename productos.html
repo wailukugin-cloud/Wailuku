@@ -464,6 +464,19 @@
         gap:12px !important;
       }
     }
+
+
+/* === WAILUKU: HERO MOBILE IMAGE SUPPORT === */
+@media (max-width: 760px) {
+  :root {
+    --hero-image: url("assets/productos-hero-mobile.jpg");
+  }
+  .hero-banner {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.58)),
+      var(--hero-image) center center / cover no-repeat !important;
+  }
+}
 </style>
 
 <style id="wailuku-final-fixes">
