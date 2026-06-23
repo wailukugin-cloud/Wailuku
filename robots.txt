@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wailukugin.vercel.app/sitemap.xml
