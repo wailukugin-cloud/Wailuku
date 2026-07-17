@@ -2174,6 +2174,34 @@ body.nav-open .nav-overlay{opacity:1!important;visibility:visible!important;poin
     min-height: 54px !important;
   }
 }
+
+/* Ajuste exclusivo para iPhone/iOS: evita que los títulos del hero se recorten */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 760px) {
+    .hero-banner {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+
+    .hero-overlay,
+    .hero-content,
+    .hero-copy {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .hero-title {
+      width: 100%;
+      max-width: 100% !important;
+      font-size: clamp(36px, 10.5vw, 46px) !important;
+      line-height: .94 !important;
+      letter-spacing: -.01em !important;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+  }
+}
 </style>
 
 </body>
