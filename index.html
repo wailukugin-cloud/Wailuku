@@ -1409,6 +1409,86 @@ img, video{max-width:100%; height:auto;}
   .product-preview-card{ min-height:280px !important; }
 }
 </style>
+<style id="wailuku-home-new-sections">
+  .experimental-teaser{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:38px;
+    z-index:4;
+    width:auto;
+    min-height:66px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:14px max(var(--pad),calc((100vw - 1600px)/2 + var(--pad)));
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:
+      radial-gradient(circle at 82% 50%,rgba(38,111,151,.18),transparent 36%),
+      linear-gradient(110deg,rgba(5,9,12,.88),rgba(7,24,34,.86));
+    box-shadow:0 16px 45px rgba(0,0,0,.28);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+  }
+  .experimental-copy{
+    min-width:0;
+    flex:1 1 auto;
+  }
+  .experimental-teaser h2{
+    margin:0;
+    font-family:var(--serif);
+    font-size:clamp(21px,2.2vw,30px);
+    line-height:1;
+    font-weight:600;
+    letter-spacing:.02em;
+    text-transform:uppercase;
+  }
+  .experimental-teaser p{
+    margin:6px 0 0;
+    color:var(--muted-2);
+    font-size:12px;
+    line-height:1.35;
+    letter-spacing:.02em;
+  }
+  .experimental-status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:34px;
+    padding:0 13px;
+    border:1px solid rgba(167,212,236,.26);
+    border-radius:999px;
+    color:rgba(214,237,248,.88);
+    background:rgba(64,139,178,.08);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    white-space:nowrap;
+    flex:0 0 auto;
+  }
+  @media (max-width:760px){
+    .experimental-teaser{
+      left:0;
+      right:0;
+      bottom:46px;
+      width:auto;
+      min-height:60px;
+      padding:11px 20px;
+    }
+    .experimental-teaser h2{font-size:clamp(18px,5vw,24px)}
+    .experimental-teaser p{margin-top:5px;font-size:11px}
+    .experimental-status{min-height:32px;padding:0 11px;font-size:9px}
+  }
+  @media (max-width:390px){
+    .experimental-teaser{left:0;right:0;gap:8px;padding-left:14px;padding-right:14px}
+    .experimental-teaser h2{font-size:15px;white-space:nowrap}
+    .experimental-teaser p{font-size:clamp(8.5px,2.6vw,10px);line-height:1.3}
+    .experimental-status{min-height:30px;padding:0 8px;font-size:7.5px;letter-spacing:.12em}
+  }
+</style>
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
@@ -1444,6 +1524,13 @@ img, video{max-width:100%; height:auto;}
 <div aria-label="Botella principal de Wailuku Gin" class="hero-visual reveal">
 <div aria-hidden="true" class="hero-glow"></div>
 </div>
+</div>
+<div class="experimental-teaser" id="experimental">
+<div class="experimental-copy">
+<h2>Wailuku Experimental</h2>
+<p>Un espacio para explorar nuevas formas de crear gin. Cada edición, una experiencia única.</p>
+</div>
+<div class="experimental-status">Próximamente</div>
 </div>
 </section>
 <section class="section shop-preview" id="productos-preview">
