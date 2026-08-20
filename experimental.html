@@ -18,8 +18,8 @@
 <link rel="icon" type="image/png" href="/favicon.png"/>
 <link rel="apple-touch-icon" href="/favicon.png"/>
 <link rel="preload" as="image" href="assets/hero-experimental-oceano.webp" type="image/webp"/>
-<title>Wailuku Experimental — Mystic Ocean</title>
-<meta content="Conocé Wailuku Experimental y su primera edición, Mystic Ocean: dos expresiones de origen común, Kai Mālie y Kai Uli." name="description"/>
+<title>Wailuku Experimental — Mystic Ocean y Rubí</title>
+<meta content="Conocé las ediciones limitadas de Wailuku Experimental: Mystic Ocean y Rubí, con sus expresiones Kai Mālie, Kai Uli, WENA y HĀʻENA." name="description"/>
 
 <!-- SEO / Google Search Console -->
 <meta name="google-site-verification" content="-3DerRHgP0reNjEoZycug6RwGoW0TbJGjgiQzTCSWSY"/>
@@ -27,22 +27,22 @@
 <meta property="og:locale" content="es_AR"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Wailuku Gin"/>
-<meta property="og:title" content="Wailuku Experimental — Mystic Ocean"/>
-<meta property="og:description" content="Un espacio para explorar nuevos botánicos, colores y sensaciones. Descubrí Kai Mālie y Kai Uli."/>
+<meta property="og:title" content="Wailuku Experimental — Mystic Ocean y Rubí"/>
+<meta property="og:description" content="Dos ediciones, cuatro expresiones. Descubrí Mystic Ocean y Rubí dentro del universo Wailuku Experimental."/>
 <meta property="og:url" content="https://wailukugin.vercel.app/experimental.html"/>
-<meta property="og:image" content="https://wailukugin.vercel.app/assets/mystic-ocean.png"/>
+<meta property="og:image" content="https://wailukugin.vercel.app/assets/rUBI(2).png"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Wailuku Experimental — Mystic Ocean"/>
-<meta name="twitter:description" content="Un espacio para explorar nuevos botánicos, colores y sensaciones. Descubrí Kai Mālie y Kai Uli."/>
-<meta name="twitter:image" content="https://wailukugin.vercel.app/assets/mystic-ocean.png"/>
+<meta name="twitter:title" content="Wailuku Experimental — Mystic Ocean y Rubí"/>
+<meta name="twitter:description" content="Dos ediciones, cuatro expresiones. Descubrí Mystic Ocean y Rubí dentro del universo Wailuku Experimental."/>
+<meta name="twitter:image" content="https://wailukugin.vercel.app/assets/rUBI(2).png"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebPage",
   "@id":"https://wailukugin.vercel.app/experimental.html#webpage",
   "url":"https://wailukugin.vercel.app/experimental.html",
-  "name":"Wailuku Experimental — Mystic Ocean",
-  "description":"Registro de las ediciones de Wailuku Experimental. Primera edición: Mystic Ocean, con las expresiones Kai Mālie y Kai Uli.",
+  "name":"Wailuku Experimental — Mystic Ocean y Rubí",
+  "description":"Registro de las ediciones de Wailuku Experimental: Mystic Ocean, con Kai Mālie y Kai Uli, y Rubí, con WENA y HĀʻENA.",
   "isPartOf":{"@id":"https://wailukugin.vercel.app/#website"},
   "inLanguage":"es-AR"
 }
@@ -991,6 +991,11 @@ img, video{max-width:100%; height:auto;}
     line-height:1.9;
   }
   .exp-edition{padding:24px 0 0}
+  .exp-edition--rubi{padding-top:112px}
+  .exp-edition--rubi .container{
+    padding-top:88px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
   .exp-edition-overview{
     display:grid;
     grid-template-columns:minmax(0,1fr) minmax(340px,.86fr);
@@ -1026,6 +1031,11 @@ img, video{max-width:100%; height:auto;}
     object-fit:cover;
     object-position:center bottom;
   }
+  .exp-edition--rubi .exp-edition-image{
+    width:min(450px,100%);
+    aspect-ratio:1003/1568;
+    background:#150708;
+  }
   .exp-expressions-grid{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -1049,6 +1059,7 @@ img, video{max-width:100%; height:auto;}
     background:#061014;
   }
   .exp-expression-visual img{width:100%;height:100%;object-fit:cover}
+  .exp-edition--rubi .exp-expression-visual{background:#150708}
   .exp-expression-copy{padding:28px 30px 34px}
   .exp-expression h3{margin:0;font-size:clamp(36px,4.4vw,58px);line-height:1}
   .exp-meaning{
@@ -1060,6 +1071,8 @@ img, video{max-width:100%; height:auto;}
     letter-spacing:.18em;
     text-transform:uppercase;
   }
+  .exp-expression--wena .exp-meaning{color:rgba(234,174,93,.94)}
+  .exp-expression--haena .exp-meaning{color:rgba(218,95,91,.94)}
   .exp-expression p{margin:18px 0 0;color:var(--muted);font-size:16px;line-height:1.85}
   .exp-note{
     margin-top:36px;
@@ -1089,7 +1102,7 @@ img, video{max-width:100%; height:auto;}
     border-radius:30px;
     background:
       linear-gradient(180deg,rgba(3,3,4,.08) 0%,rgba(3,3,4,.26) 45%,rgba(3,3,4,.92) 100%),
-      url("assets/mar-rubi.webp") center 52% / cover no-repeat;
+      url("assets/earl-grey-proximamente.webp") center 52% / cover no-repeat;
     box-shadow:var(--shadow);
     text-align:center;
   }
@@ -1129,6 +1142,8 @@ img, video{max-width:100%; height:auto;}
     .exp-hero p{font-size:16px}
     .exp-intro{padding:58px 0 38px}
     .exp-edition{padding-top:16px}
+    .exp-edition--rubi{padding-top:72px}
+    .exp-edition--rubi .container{padding-top:62px}
     .exp-edition-overview{
       grid-template-columns:1fr;
       gap:30px;
@@ -1196,7 +1211,7 @@ img, video{max-width:100%; height:auto;}
 <div class="exp-edition-copy reveal">
 <div class="exp-kicker">Experimental N.º 1</div>
 <h2>Mystic Ocean</h2>
-<p>Una creación refrescante, cítrica y herbal, atravesada por los tonos naturales de la butterfly pea. De un mismo origen nacieron dos expresiones con identidades diferentes.</p>
+<p>Una creación fresca, cítrica y herbal, con notas que nacen de la melisa, el lemongrass y la menta, acompañados por otros botánicos. La butterfly pea aporta sus tonos naturales y da origen a dos expresiones con identidades diferentes.</p>
 </div>
 <figure class="exp-edition-image reveal">
 <img alt="Mystic Ocean: las expresiones Kai Uli y Kai Mālie de Wailuku Experimental" src="assets/mystic-ocean.png"/>
@@ -1211,7 +1226,7 @@ img, video{max-width:100%; height:auto;}
 <div class="exp-kicker">Expresión 01</div>
 <h3>Kai Mālie</h3>
 <span class="exp-meaning">Mar sereno</span>
-<p>La expresión más suave y luminosa de Mystic Ocean. Su tonalidad turquesa acompaña un perfil fresco, cítrico y herbal, inspirado en la serenidad del océano.</p>
+<p>La expresión más suave y luminosa de Mystic Ocean. Conserva el perfil fresco y herbal de la melisa, el lemongrass y la menta, mientras la butterfly pea aporta su característico tono turquesa.</p>
 </div>
 </article>
 <article class="exp-expression reveal">
@@ -1222,16 +1237,54 @@ img, video{max-width:100%; height:auto;}
 <div class="exp-kicker">Expresión 02</div>
 <h3>Kai Uli</h3>
 <span class="exp-meaning">Mar profundo</span>
-<p>La expresión más intensa y profunda de Mystic Ocean. Su tonalidad más oscura y sus notas de limón revelan un perfil misterioso, fresco y de mayor carácter.</p>
+<p>Parte de la misma base herbal, pero suma una mayor presencia de butterfly pea y un toque de cáscara de limón. El resultado es una expresión más intensa, profunda y con sutiles notas cítricas.</p>
 </div>
 </article>
 </div>
 <div class="exp-note reveal">Descubrí la magia de Mystic Ocean: al encontrarse con el agua tónica, cada expresión revela un nuevo color.</div>
+</div>
+</section>
+<section class="exp-edition exp-edition--rubi">
+<div class="container">
+<div class="exp-edition-overview">
+<div class="exp-edition-copy reveal">
+<div class="exp-kicker">Experimental N.º 2</div>
+<h2>Rubí</h2>
+<p>Una edición de perfil cítrico, floral y levemente dulce, nacida del encuentro entre el hibiscus, el té rojo y un toque de regaliz, acompañados por otros botánicos. De un mismo origen surgieron dos expresiones: una más suave y otra más intensa, especiada y levemente picante.</p>
+</div>
+<figure class="exp-edition-image reveal">
+<img alt="Rubí: las expresiones WENA y HĀʻENA de Wailuku Experimental" src="assets/rUBI(2).png"/>
+</figure>
+</div>
+<div class="exp-expressions-grid">
+<article class="exp-expression exp-expression--wena reveal">
+<div class="exp-expression-visual">
+<img alt="WENA, expresión dorada de Rubí inspirada en el amanecer" src="assets/RUBI1(1).png"/>
+</div>
+<div class="exp-expression-copy">
+<div class="exp-kicker">Expresión 01</div>
+<h3>WENA</h3>
+<span class="exp-meaning">Resplandor del amanecer</span>
+<p>Una expresión suave y aromática, en la que el hibiscus, el té rojo y el regaliz se integran con una base cítrica de naranja y pomelo. Su perfil levemente dulce y su color cálido evocan los primeros tonos del amanecer.</p>
+</div>
+</article>
+<article class="exp-expression exp-expression--haena reveal">
+<div class="exp-expression-visual">
+<img alt="HĀʻENA, expresión roja de Rubí inspirada en el atardecer" src="assets/RUBI2(1).png"/>
+</div>
+<div class="exp-expression-copy">
+<div class="exp-kicker">Expresión 02</div>
+<h3>HĀʻENA</h3>
+<span class="exp-meaning">Calor ardiente</span>
+<p>Sobre la misma base de Rubí, esta expresión suma una mayor presencia de hibiscus y naranja, junto con pimienta de Jamaica, pimienta negra y pimienta rosa. El resultado es más intenso, especiado y con un final levemente picante.</p>
+</div>
+</article>
+</div>
 <div class="exp-future reveal">
 <div class="exp-future-content">
-<div class="exp-kicker">El registro continúa</div>
-<h2>Próximamente · Rubí</h2>
-<p>La exploración continúa. Seguinos para no perderte el próximo lanzamiento de Wailuku Experimental.</p>
+<div class="exp-kicker">Experimental N.º 3</div>
+<h2>Próximamente · Earl Grey</h2>
+<p>Una nueva edición comienza a tomar forma. El carácter del té negro y la frescura de la bergamota se encuentran en una expresión cítrica, intensa y profundamente aromática.</p>
 </div>
 </div>
 </div>
