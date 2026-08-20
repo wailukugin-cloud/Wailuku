@@ -220,6 +220,21 @@
     .product-image::after{
       content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.18)); pointer-events:none;
     }
+    .stock-ribbon{
+      position:absolute; z-index:3; top:25px; right:-45px; width:190px; min-height:30px;
+      display:flex; align-items:center; justify-content:center; padding:0 12px;
+      transform:rotate(45deg); box-shadow:0 6px 18px rgba(0,0,0,.32);
+      color:#fff; font-size:10px; font-weight:800; line-height:1; letter-spacing:.13em;
+      text-align:center; text-transform:uppercase; pointer-events:none;
+    }
+    .stock-ribbon--low{
+      color:#16110a; background:linear-gradient(90deg, #b89450, #dec47e);
+    }
+    .stock-ribbon--sold-out{
+      background:linear-gradient(90deg, #562129, #8d3540);
+    }
+    .product-card--sold-out .product-image img{filter:brightness(.62) saturate(.72);}
+    .product-card--sold-out:hover .product-image img{filter:brightness(.68) saturate(.76);}
     .product-copy{position:relative}
     .badge{
       display:inline-flex; align-items:center; justify-content:center; min-height:28px; padding:0 12px; border-radius:999px;
@@ -247,6 +262,11 @@
     .btn:hover{transform:translateY(-2px); background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.24);}
     .btn-primary{background:rgba(255,255,255,.92); color:#090909; border-color:rgba(255,255,255,.92);}
     .btn-primary:hover{background:#fff}
+    .btn-disabled{
+      color:rgba(243,240,233,.52); background:rgba(255,255,255,.035);
+      border-color:rgba(255,255,255,.12); cursor:not-allowed;
+    }
+    .btn-disabled:hover{transform:none; background:rgba(255,255,255,.035); border-color:rgba(255,255,255,.12);}
     .info{padding:34px 0 0}
     .info-card{
       padding:38px; border-radius:32px; border:1px solid rgba(255,255,255,.07);
@@ -1075,36 +1095,36 @@ img, video{max-width:100%; height:auto;}
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-image"><img alt="Copa Wailuku" src="assets/shop-copa.jpg"/></div>
+<div class="product-image"><img alt="Copa Wailuku" src="assets/shop-copa.jpg"/><span class="stock-ribbon stock-ribbon--low" aria-label="Última unidad disponible">Última unidad</span></div>
 <div class="product-copy">
 <div class="badge">Experiencia de servicio</div>
 <h2>Copa Wailuku</h2>
 <p>Una copa pensada para acompañar la experiencia de consumo con presencia, elegancia y el formato ideal para realzar aromas y frescura.</p>
 <div class="price-row"><div class="price-new">$14.000</div></div>
-<div class="price-note">Venta individual.</div>
+<div class="price-note">Queda 1 unidad disponible.</div>
 <div class="actions"><a class="btn btn-primary" href="contacto.html">Consultar disponibilidad</a></div>
 </div>
 </article>
 
-<article class="product-card reveal">
-<div class="product-image"><img alt="Copa Wailuku AFA de 600 cc" src="assets/shop-copa-afa.png"/></div>
+<article class="product-card product-card--sold-out reveal">
+<div class="product-image"><img alt="Copa Wailuku AFA de 600 cc" src="assets/shop-copa-afa.png"/><span class="stock-ribbon stock-ribbon--sold-out">Agotado</span></div>
 <div class="product-copy">
 <div class="badge">Nuevo producto · Edición limitada</div>
 <h2>Copa AFA 600 cc</h2>
 <p>Una copa de edición limitada con identidad Wailuku y escudo AFA. Pensada para disfrutar un gin tonic con presencia, elegancia y espíritu argentino.</p>
 <div class="price-row"><div class="price-new">$12.000</div></div>
-<div class="price-note">Venta individual. Stock limitado.</div>
-<div class="actions"><a class="btn btn-primary" href="contacto.html">Consultar disponibilidad</a></div>
+<div class="price-note">Producto agotado.</div>
+<div class="actions"><span class="btn btn-disabled" aria-disabled="true">Sin stock</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-image"><img alt="Copón AFA de 450 cc" src="assets/shop-copon-afa.png"/></div>
+<div class="product-image"><img alt="Copón AFA de 450 cc" src="assets/shop-copon-afa.png"/><span class="stock-ribbon stock-ribbon--low">Últimas unidades</span></div>
 <div class="product-copy">
 <div class="badge">Nuevo producto · Edición limitada</div>
 <h2>Copón AFA 450 cc</h2>
 <p>Un copón gourmet de edición limitada, versátil y elegante, serigrafiado con escudo AFA y marca Wailuku. Ideal para tragos y cócteles de autor.</p>
 <div class="price-row"><div class="price-new">$8.500</div></div>
-<div class="price-note">Venta individual. Stock limitado.</div>
+<div class="price-note">Últimas unidades disponibles.</div>
 <div class="actions"><a class="btn btn-primary" href="contacto.html">Consultar disponibilidad</a></div>
 </div>
 </article>
@@ -1153,15 +1173,15 @@ img, video{max-width:100%; height:auto;}
 <div class="actions"><a class="btn btn-primary" href="contacto.html">Consultar disponibilidad</a></div>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-image"><img alt="Botella Wailuku Gin más dos copas" src="assets/shop-botella-dos-copas.jpg"/></div>
+<article class="product-card product-card--sold-out reveal">
+<div class="product-image"><img alt="Botella Wailuku Gin más dos copas" src="assets/shop-botella-dos-copas.jpg"/><span class="stock-ribbon stock-ribbon--sold-out">Sin stock</span></div>
 <div class="product-copy">
 <div class="badge">Combo destacado</div>
 <h2>Botella + 2 copas</h2>
 <p>Una opción ideal para regalar o compartir. Combina la botella clásica con dos copas para una experiencia completa desde el primer servicio.</p>
 <div class="price-row"><div class="price-old">$54.000</div><div class="price-new">$46.000</div></div>
-<div class="price-note">Combo promocional con descuento aplicado.</div>
-<div class="actions"><a class="btn btn-primary" href="contacto.html">Consultar disponibilidad</a></div>
+<div class="price-note">Producto sin stock.</div>
+<div class="actions"><span class="btn btn-disabled" aria-disabled="true">Sin stock</span></div>
 </div>
 </article>
 </div>
