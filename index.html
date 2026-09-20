@@ -1490,24 +1490,50 @@ img, video{max-width:100%; height:auto;}
   }
 </style>
 <style>
-  /* Espacio temporal para la placa de SANCA Vibra 2026.
-     Archivo esperado: assets/sanca-vibra-banner.jpg (1920 x 500 px). */
+  /* Placa temporal de SANCA Vibra 2026.
+     Archivo esperado: assets/sanca-vibra-banner.png (1920 x 500 px). */
   .sanca-banner{
     margin-top:78px;
     width:100%;
     aspect-ratio:1920 / 500;
     min-height:120px;
     max-height:500px;
+    position:relative;
     background-color:#0b0b0c;
-    background-image:url("assets/sanca-vibra-banner.jpg");
+    background-image:url("assets/sanca-vibra-banner.png");
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
     border-bottom:1px solid rgba(255,255,255,.08);
   }
+  .sanca-button{
+    position:absolute;
+    left:51%;
+    top:62%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:38px;
+    padding:0 20px;
+    border:1px solid #fff;
+    border-radius:999px;
+    color:#090a0c;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.14em;
+    line-height:1;
+    text-transform:uppercase;
+    transition:transform .2s ease,background-color .2s ease,color .2s ease;
+  }
+  .sanca-button:hover{transform:translateY(-2px);background:#090a0c;color:#fff}
+  .sanca-button:focus-visible{outline:2px solid #fff;outline-offset:4px}
   .sanca-banner + .hero{min-height:calc(100vh - 198px);padding-top:60px}
   @media (max-width:760px){
     .sanca-banner{margin-top:90px;aspect-ratio:auto;height:140px;background-position:center}
+    .sanca-button{left:50%;top:auto;bottom:10px;transform:translateX(-50%);min-height:32px;padding:0 14px;font-size:8px;white-space:nowrap}
+    .sanca-button:hover{transform:translateX(-50%) translateY(-2px)}
     .sanca-banner + .hero{min-height:calc(100svh - 230px);padding-top:42px}
   }
 </style>
@@ -1533,7 +1559,9 @@ img, video{max-width:100%; height:auto;}
 </div>
 </header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
-<section aria-label="Wailuku Gin en SANCA Vibra" class="sanca-banner"></section>
+<section aria-label="Wailuku Gin en SANCA Vibra" class="sanca-banner">
+<a aria-label="Entradas e información de SANCA Vibra en Instagram" class="sanca-button" href="https://www.instagram.com/sancavibra/?hl=es-la" rel="noopener noreferrer" target="_blank">Entradas e información</a>
+</section>
 <section class="hero">
 <div class="container hero-grid">
 <div class="reveal">
