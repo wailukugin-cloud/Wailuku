@@ -1489,6 +1489,28 @@ img, video{max-width:100%; height:auto;}
     .experimental-status{min-height:30px;padding:0 8px;font-size:7.5px;letter-spacing:.12em}
   }
 </style>
+<style>
+  /* Espacio temporal para la placa de SANCA Vibra 2026.
+     Archivo esperado: assets/sanca-vibra-banner.jpg (1920 x 500 px). */
+  .sanca-banner{
+    margin-top:78px;
+    width:100%;
+    aspect-ratio:1920 / 500;
+    min-height:120px;
+    max-height:500px;
+    background-color:#0b0b0c;
+    background-image:url("assets/sanca-vibra-banner.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .sanca-banner + .hero{min-height:calc(100vh - 198px);padding-top:60px}
+  @media (max-width:760px){
+    .sanca-banner{margin-top:90px;aspect-ratio:auto;height:140px;background-position:center}
+    .sanca-banner + .hero{min-height:calc(100svh - 230px);padding-top:42px}
+  }
+</style>
 </head>
 <body>
 <div aria-label="Verificación de edad" aria-modal="true" class="gate" id="ageGate" role="dialog">
@@ -1511,6 +1533,7 @@ img, video{max-width:100%; height:auto;}
 </div>
 </header><div aria-hidden="true" class="nav-overlay" id="navOverlay"></div>
 <main>
+<section aria-label="Wailuku Gin en SANCA Vibra" class="sanca-banner"></section>
 <section class="hero">
 <div class="container hero-grid">
 <div class="reveal">
